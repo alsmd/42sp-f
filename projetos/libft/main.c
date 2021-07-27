@@ -10,10 +10,8 @@ extern int errno;
 
 int	main(void)
 {
-	char haystack[30] = "123456124";
+	char haystack[] = "123456124";
 
-	printf("%s\n", strnstr(haystack, "", 9));
-	printf("%s\n", ft_strnstr(haystack, "", 9));
-	printf("%p\n",haystack);
+	printf("%s\n", ft_substr(haystack, 10, 7));
 	return (0);
 }
