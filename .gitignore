@@ -1,4 +1,4 @@
 *.o
 *.a
-projetos/libft/libftTester
-projetos/libft/Libftest
+projetos/libft/tripouille
+projetos/libft/Tester
