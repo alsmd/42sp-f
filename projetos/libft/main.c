@@ -10,6 +10,17 @@ extern int errno;
 
 int	main(void)
 {
-	printf("%s\n", ft_strtrim("---- ---ola mundo--- ----", "- "));
+	char	**array;
+	char	*splitme;
+
+	splitme = strdup(" Tripouille ");
+	array = ft_split(splitme, ' ');
+
+	printf("%d", strcmp("Tripouille", array[0]));
+	/* while (array[index])
+	{
+		printf("%s\n", array[index]);
+		index++;
+	} */
 	return (0);
 }

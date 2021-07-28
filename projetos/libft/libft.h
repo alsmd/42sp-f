@@ -231,9 +231,19 @@ char	*ft_strjoin(char const *s1, char const *s2);
 	@param (s1)		the string to be trimmed.
 	@param (set)	the reference set of characters to trim.
 	@description	create a copy(with malloc) of s1 without
-					the set of characters in the beginning and the end of it.
+					the set of characters in the beginning and the end of the string.
 	@return			the trimed string or null if the alocation fails.
+					returns an empty string(malloc) if s1 is an empty string, or if all the
+					characters in s1 is into set.
 */
 char	*ft_strtrim(char const *s1, char const *set);
 
+/*
+	@param (s)		the string to be split.
+	@param (c)		the delimiter character.
+	@description	create an array of strings (malloc) obtained by splitting s,
+					using c as delimiter, array must be null pointer termineted
+	@return			The array of new strings resulting from the split. NULL if the allocation fails.
+*/
+char **ft_split(char const *s, char c);
 #endif
