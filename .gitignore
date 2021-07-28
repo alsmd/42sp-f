@@ -1,3 +1,4 @@
 *.o
 *.a
 projetos/libft/libftTester
+projetos/libft/Libftest

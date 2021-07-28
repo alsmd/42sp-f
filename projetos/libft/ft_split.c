@@ -5,7 +5,7 @@ static size_t	get_size(char const *s, char c)
 {
 	size_t		size;
 	short int	str_found;
-	
+
 	str_found = 0;
 	size = 0;
 	if (!s[0])
@@ -42,7 +42,7 @@ static char	*next_str(char const *s, char c)
 	static size_t	desloc;
 	char			*string;
 
-	while (s[desloc] == c)//----ola---minha-gente
+	while (s[desloc] == c)
 		desloc++;
 	size = get_length(&s[desloc], c);
 	string = ft_substr(s, desloc, size);
