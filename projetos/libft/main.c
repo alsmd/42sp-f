@@ -10,8 +10,6 @@ extern int errno;
 
 int	main(void)
 {
-	char haystack[] = "123456124";
-
-	printf("%s\n", ft_substr(haystack, 10, 7));
+	printf("%s\n", ft_strtrim("---- ---ola mundo--- ----", "- "));
 	return (0);
 }
