@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:03:57 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 20:24:46 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/29 12:14:44 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -282,4 +282,67 @@ char	*ft_strtrim(char const *s1, char const *set);
 					the allocation fails.
 */
 char	**ft_split(char const *s, char c);
+
+/*
+	@param (n)		The integer to be converted.
+	@brief			Create an string representing the integer 'n'.
+					Negative numbers must be handled.
+	@return			The string represeting the integer.
+					Null if the allocations fails.
+*/
+char	*ft_itoa(int n);
+
+/*
+	@param (s)		The string on which to iterate.
+	@param (f)		The function to apply to each  character.
+	@brief			Applies the functions 'f' to each character of the string s
+					to create  a new string(malloc) resulting of successive
+					applications of 'f'
+	@return			The created string Or Null if allocations fails.
+*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/*
+	@param (s)		The string on which to iterate.
+	@param (f)		The ifunctions to apply to each character.
+	@brief			Applies the function f to each character of the
+					string passed as argument, and passing its index
+					as first argument. Each character is passed by
+					address to f to be modified if necessary
+	@return			None.
+*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/*
+	@param (n)		The character to output.
+	@param (n)		The file descriptor on which to write.	
+	@brief			Outputs the character ’c’ to the given file descriptor.
+	@return			None.
+*/
+void ft_putchar_fd(char c, int fd);
+
+/*
+	@param (s)		The string to output.
+	@param (fd)		The file descriptor on which to write.	
+	@brief			Outputs the string ’s’ to the given file descriptor.
+	@return			None.
+*/
+void ft_putstr_fd(char *s, int fd);
+
+/*
+	@param (s)		The string to output.
+	@param (fd)		The file descriptor on which to write.	
+	@brief			Outputs the string ’s’ to the given file descriptor.
+					Followed by a new line.
+	@return			None.
+*/
+void ft_putendl_fd(char *s, int fd);
+
+/*
+	@param (n)		The integer to output.
+	@param (fd)		The file descriptor on which to write.	
+	@brief			Outputs the integer ’n’ to the given file descriptor.
+	@return			None.
+*/
+void ft_putnbr_fd(int n, int fd);
 #endif

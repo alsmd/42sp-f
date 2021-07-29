@@ -7,6 +7,9 @@
 		"deque": "c",
 		"string": "c",
 		"unordered_map": "c",
-		"vector": "c"
+		"vector": "c",
+		"unistd.h": "c",
+		"features.h": "c",
+		"libft.h": "c"
 	}
 }
