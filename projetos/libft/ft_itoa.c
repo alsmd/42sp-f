@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 12:13:35 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/29 14:07:43 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/29 14:47:00 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static size_t	get_size(int n)
 	}
 	return (index);
 }
+
 static char	*set_string(unsigned int n, size_t size, int is_negative)
 {
 	char	*string;
@@ -62,5 +63,5 @@ char	*ft_itoa(int n)
 	size = get_size(number);
 	if (number == 0)
 		size = 1;
-	return set_string(number, size, is_negative);
+	return (set_string(number, size, is_negative));
 }

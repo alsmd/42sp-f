@@ -31,3 +31,5 @@ re: fclean all
 
 run: ${MAIN:.c=.o}
 	${CC} ${CFLAGS} -o ${NAME} ${MAIN:.c=.o}  -L. -lft
+
+.PHONY: run re fclean clean
