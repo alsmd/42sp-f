@@ -6,14 +6,100 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:03:57 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/29 12:14:44 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/30 08:33:03 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
+/*-------List-------*/
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+/*
+	@param (content)	The content to create the new element with.
+	@brief				Allocates(malloc) and returns a new element.
+						The t_list's content will come from the parameter,
+						and it will have 'next' pointing to null.
+	@return				The new element.
+*/
+t_list	*ft_lstnew(void *content);
+
+/*
+	@param (lst)	The address of a pointer to the first link ofa list.
+	@param (new)	The address of a pointer to the element to be added to the list.
+	@brief			Adds the element ’new’ at the beginning of the list.
+	@return			noen.
+*/
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/*
+	@param (lst)	The beginning of the list
+	@brief			Counts the number of elements in a list.
+	@return			Length of the list.
+*/
+int		ft_lstsize(t_list *lst);
+
+/*
+	@param (lst)	The beginning of the list
+	@brief			Returns the last element of the list.
+	@return			Last element of the list..
+*/
+t_list	*ft_lstlast(t_list *lst);
+
+/*
+	@param (lst)	The beginning of the list
+	@param (new)	The address of a pointer to the element to be added to the list.
+	@brief			Adds the element ’new’ at the end of the list..
+	@return			none.
+*/
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/*
+	@param (lst)	The element to free.
+	@param (del)	The address of the function used to delete the content.
+	@brief			Delete de element's content with 'del' and free the element
+					The memory of 'next' must not be freed.
+	@return			none.
+*/
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+
+/*
+	@param (lst)	The adress of a pointer to an element.
+	@param (del)	The address of the function used to delete the content.
+	@brief			Deletes and frees the given element and every successor of
+					that element, using the function ’del’and free(3).Finally,
+					the pointer to the list must be set toNULL.
+	@return			none.
+*/
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+/*
+	@param (lst)	The beginning of the list.
+	@param (f)		The adress of the function used to iterate on the list.
+	@brief			Iterates the list ’lst’ and applies the function’f’
+					to the content of each element.
+	@return			none.
+*/
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/*
+	@param (lst)	The beginning of the list.
+	@param (f)		The adress of the function used to iterate onthe list
+	@param (del)	The adress of the function used to delete thecontent of
+					an element if needed.
+	@brief			Iterates the list ’lst’ and applies the function’f’ to the
+					content of each element.  Creates a new list resulting of the
+					successive applications ofthe function ’f’.  The ’del’ function
+					is used to delete the content of an element if needed.
+	@return			The new list.  NULL if the allocation fails.
+*/
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /*-------TYPES-------*/
 
 /*
@@ -319,7 +405,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 	@brief			Outputs the character ’c’ to the given file descriptor.
 	@return			None.
 */
-void ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd);
 
 /*
 	@param (s)		The string to output.
@@ -327,7 +413,7 @@ void ft_putchar_fd(char c, int fd);
 	@brief			Outputs the string ’s’ to the given file descriptor.
 	@return			None.
 */
-void ft_putstr_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 /*
 	@param (s)		The string to output.
@@ -336,7 +422,7 @@ void ft_putstr_fd(char *s, int fd);
 					Followed by a new line.
 	@return			None.
 */
-void ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 /*
 	@param (n)		The integer to output.
@@ -344,5 +430,5 @@ void ft_putendl_fd(char *s, int fd);
 	@brief			Outputs the integer ’n’ to the given file descriptor.
 	@return			None.
 */
-void ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif

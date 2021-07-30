@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 13:43:24 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/29 14:25:16 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/29 21:02:02 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static void	putnbr(int n, int fd)
 		write(fd, &digit, 1);
 	}
 }
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == 0)
@@ -40,5 +41,3 @@ void	ft_putnbr_fd(int n, int fd)
 		putnbr(n, fd);
 	}
 }
-
-	
