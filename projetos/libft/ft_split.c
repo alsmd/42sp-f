@@ -6,14 +6,14 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:27 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:44:27 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/30 10:10:11 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	get_size(char const *s, char c)
+static size_t	get_size(char *s, char c)
 {
 	size_t		size;
 	short int	str_found;
@@ -38,31 +38,20 @@ static size_t	get_size(char const *s, char c)
 	return (size);
 }
 
-static size_t	get_length(char const *s, char c)
+static size_t	get_length(char *s, char c)
 {
 	size_t		index;
 
 	index = 0;
-	while (s[index] && s[index] != c)
+	while (*s && *s != c)
+	{
 		index++;
+		s++;
+	}
 	return (index);
 }
 
-static char	*next_str(char const *s, char c)
-{
-	size_t			size;
-	static size_t	desloc;
-	char			*string;
-
-	while (s[desloc] == c)
-		desloc++;
-	size = get_length(&s[desloc], c);
-	string = ft_substr(s, desloc, size);
-	desloc += size;
-	return (string);
-}
-
-void	malloc_error(char	**array, size_t size)
+void	malloc_error(char **array, size_t size)
 {
 	size_t	index;
 
@@ -83,17 +72,24 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 
 	index = 0;
-	size = get_size(s, c);
+	if (!s)
+		return (0);
+	size = get_size((char *)s, c);
 	array = (char **) ft_calloc(size + 1, sizeof(char *));
 	if (!array)
 		return (0);
-	while (index < size)
+	while (size--)//
 	{
-		array[index] = next_str(s, c);
+		while (*s == c)
+			s++;
+		array[index] = ft_substr((char *)s, 0, get_length((char *)s, c));
 		if (!array[index])
-			malloc_error(array, size);
+		{
+			malloc_error(array, index);
+			return (0);
+		}
+		s += get_length((char *)s, c);
 		index++;
 	}
-	array[index] = 0;
 	return (array);
 }
