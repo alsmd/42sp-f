@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:03:57 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/30 14:54:25 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/31 10:30:06 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -261,7 +261,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 	@brief			Appends the NULL-terminated string src to the end of dst,
 					it will append at most size - ft_strlen(dst) - 1 byte,
 					Nul-terminating the result
-	@return			Length of src.
+	@return			The initial length of dst plus the length of src.
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
 

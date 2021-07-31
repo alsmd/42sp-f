@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 30 20:53:03 2021
+# Make data base, printed on Sat Jul 31 09:49:19 2021
 
 # Variables
 
@@ -53,7 +53,7 @@ SNAP_DATA = /var/snap/code/70
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:41296
+JOURNAL_STREAM = 8:40484
 # makefile (from 'Makefile', line 22)
 CFLAGS = -Wall -Werror -Wextra -g
 # environment
@@ -85,7 +85,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 7)
 OBJS = $(FILES:.c=.o)
 # environment
-MANAGERPID = 857
+MANAGERPID = 863
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -119,7 +119,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 603548dca56e412d8574c9df0f65ad9d
+INVOCATION_ID = 006650bde5d7488a92a12d049bb4084b
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/70/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -131,7 +131,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3220
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1687
 # automatic
 %F = $(notdir $%)
 # environment
@@ -145,7 +145,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/libft
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1102
+SSH_AGENT_PID = 1089
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -199,7 +199,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-522e01b3-2cde-48f4-b7fc-e6e11b51bf74.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a0bd3184-5cc7-4359-bd56-5168734c66e5.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -294,7 +294,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3268
+VSCODE_PID = 1729
 # makefile (from 'Makefile', line 1)
 FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c  ft_putendl_fd.c ft_putnbr_fd.c
 # variable set hash-table stats:
@@ -332,7 +332,7 @@ ft_lstiter.o:
 # Not a target:
 ft_memcpy.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-30 12:59:06.240275252
+#  Last modified 2021-07-31 06:49:34.863190276
 #  File has been updated.
 #  Successfully updated.
 
@@ -346,7 +346,7 @@ ft_itoa.o:
 # Not a target:
 ft_memcmp.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-30 12:59:07.060291355
+#  Last modified 2021-07-31 08:48:23.899627316
 #  File has been updated.
 #  Successfully updated.
 
@@ -382,14 +382,14 @@ ft_lstlast.o:
 # Not a target:
 ft_memchr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-30 12:59:06.98828994
+#  Last modified 2021-07-31 08:03:08.474526686
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_memset.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-30 12:59:06.08027211
+#  Last modified 2021-07-30 20:56:39.701482608
 #  File has been updated.
 #  Successfully updated.
 
@@ -448,7 +448,7 @@ libft: ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strle
 # automatic
 # ^ := ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o ft_strchr.o ft_strrchr.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 # automatic
-# ? := ft_isalpha.o
+# ? := ft_isalpha.o ft_memset.o ft_memcpy.o ft_memchr.o ft_memcmp.o ft_calloc.o
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/14=14%
 #  recipe to execute (from 'Makefile', line 28):
@@ -531,7 +531,7 @@ fclean: clean
 # Not a target:
 ft_calloc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-30 12:59:07.348297015
+#  Last modified 2021-07-31 09:34:39.453633472
 #  File has been updated.
 #  Successfully updated.
 
@@ -726,6 +726,6 @@ ft_putendl_fd.o:
 # strcache performance: lookups = 166 / hit rate = 34%
 # hash-table stats:
 # Load=108/8192=1%, Rehash=0, Collisions=4/166=2%
-# Finished Make data base on Fri Jul 30 20:53:03 2021
+# Finished Make data base on Sat Jul 31 09:49:19 2021
 
  
