@@ -6,13 +6,14 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:03:57 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/31 10:30:06 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 09:54:13 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
+#include <ctype.h>
 /*-------List-------*/
 
 typedef struct s_list
@@ -90,8 +91,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /*
 	@param (lst)	The beginning of the list.
-	@param (f)		The adress of the function used to iterate onthe list
-	@param (del)	The adress of the function used to delete thecontent of
+	@param (f)		The adress of the function used to iterate on the list
+	@param (del)	The adress of the function used to delete the content of
 					an element if needed.
 	@brief			Iterates the list ’lst’ and applies the function’f’ to the
 					content of each element.  Creates a new list resulting of the

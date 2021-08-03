@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:43:40 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:43:47 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 08:57:40 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static int	is_number(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	size_t	index;
-	int		sign;
-	int		re;
+	size_t		index;
+	int			sign;
+	long int	re;
 
 	sign = 1;
 	re = 0;

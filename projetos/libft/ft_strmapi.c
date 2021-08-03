@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 14:12:23 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/29 14:45:08 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 08:48:24 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	size = ft_strlen(s);
 	string = (char *) ft_calloc(size + 1, sizeof(char));
+	if (!string)
+		return (0);
 	while (size > 0)
 	{
 		string[size - 1] = f(size - 1, s[size - 1]);

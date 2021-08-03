@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:18 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/31 06:49:32 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 06:58:39 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	if (dest == 0 && src == 0)
+		return (0);
 	while (n > 0)
 	{
 		((char *) dest)[n - 1] = ((unsigned char *) src)[n - 1];

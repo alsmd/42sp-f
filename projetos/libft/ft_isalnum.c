@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:43:58 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:43:59 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 10:04:33 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 int	ft_isalnum(int c)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	if (c >= 65 && c <= 90)
-		return (1);
-	if (c >= 97 && c <= 122)
-		return (1);
+	char	character;
+
+	character = c;
+	if (character >= 'a' && character <= 'z')
+		return (8);
+	if (character >= 'A' && character <= 'Z')
+		return (8);
+	if (character >= '0' && character <= '9')
+		return (8);
 	return (0);
 }

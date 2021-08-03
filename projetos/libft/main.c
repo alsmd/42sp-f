@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 20:59:02 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/30 13:33:05 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 10:05:44 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,22 @@
 
 int	main(void)
 {
-	char	str[30] = "123456789";
+	int	i;
 
-	ft_memmove(&str[4], &str[2], 5);
+	i = -1;
+	while (i < 530)
+	{
+		/* if (ft_isalnum(i) != isalnum(i))
+		{
+			printf("Fail: %d \n", i);
+			printf("ft_isalnum:%d \n", ft_isalnum(i));
+			printf("isalnum:%d \n", isalnum(i));
+		} */
+		printf("Num:%d \n", i);
+		printf("isalnum:%d \n", isalnum(i));
+
+		i++;
+	}	
+
 	return (0);
 }

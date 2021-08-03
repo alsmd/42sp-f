@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:37 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:44:37 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/03 08:45:55 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		size = s1len + s2len;
 	}
 	string = (char *) ft_calloc(size + 1, sizeof(char));
+	if (!string)
+		return (0);
 	ft_strlcpy(string, s1, s1len + 1);
 	ft_strlcat(string, s2, s1len + s2len + 1);
 	return (string);
