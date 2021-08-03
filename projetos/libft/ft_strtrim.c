@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:46:00 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:46:01 by flavio           ###   ########.fr       */
+/*   Updated: 2021/07/31 15:14:29 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	get_size(char const *s, char const *set)
 		start++;
 	if (start == ft_strlen(s))
 		return (0);
-	while (is_in(set, s[end]) && s[end] && end)
+	while (is_in(set, s[end]) && end)
 		end--;
 	size = end - start + 1;
 	return (size);

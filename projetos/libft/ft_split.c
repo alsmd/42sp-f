@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:27 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/30 10:10:11 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/01 07:12:52 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	array = (char **) ft_calloc(size + 1, sizeof(char *));
 	if (!array)
 		return (0);
-	while (size--)//
+	while (size--)
 	{
 		while (*s == c)
 			s++;

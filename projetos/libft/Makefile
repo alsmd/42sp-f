@@ -41,4 +41,8 @@ re: fclean all
 run: $(MAIN:.c=.o)
 	$(CC) $(CFLAGS) -o $(NAME) $(MAIN:.c=.o)  -L. -lft
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES) ${BONUS_FILES}
+	gcc -nostartfiles -shared -o libft.so $(OBJS) ${BONUS_OBJS}
+
 .PHONY: run re fclean clean
