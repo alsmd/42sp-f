@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:27 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/01 07:12:52 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/04 09:05:20 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static size_t	get_length(char *s, char c)
 	return (index);
 }
 
-void	malloc_error(char **array, size_t size)
+static void	malloc_error(char **array, size_t size)
 {
 	size_t	index;
 

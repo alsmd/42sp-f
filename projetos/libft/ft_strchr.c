@@ -6,13 +6,13 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:29 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:44:30 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/04 08:58:53 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	size_t	index;
 	size_t	size;
@@ -22,7 +22,7 @@ char	*ft_strchr(char *s, int c)
 	while (index <= size)
 	{
 		if (s[index] == ((char)c))
-			return (&s[index]);
+			return ((char *)&s[index]);
 		index++;
 	}
 	return (0);

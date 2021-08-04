@@ -6,14 +6,14 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:03:57 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/03 09:54:13 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/04 09:07:43 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
-#include <ctype.h>
+# include <ctype.h>
 /*-------List-------*/
 
 typedef struct s_list
@@ -274,7 +274,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 	@return			Returns a pointer to the matched character,
 					or nUll if the character is not found.
 */
-char	*ft_strchr(char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
 /*
 	@param (s)		String that will be scanned.
@@ -284,7 +284,7 @@ char	*ft_strchr(char *s, int c);
 	@return			Returns a pointer to the matched character,
 					or nUll if the character is not found.
 */
-char	*ft_strrchr(char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 /*
 	@param (s1)		First string to be compared.
@@ -307,7 +307,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 					otherwise a pointer to the first occurence of little
 					is returned.
 */
-char	*ft_strnstr(char *big, char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 /*
 	@param (nptr)	Scanned string.
