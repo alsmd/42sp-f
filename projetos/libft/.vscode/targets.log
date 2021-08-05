@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug  3 05:27:47 2021
+# Make data base, printed on Thu Aug  5 11:14:41 2021
 
 # Variables
 
@@ -53,7 +53,7 @@ SNAP_DATA = /var/snap/code/70
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:42623
+JOURNAL_STREAM = 8:40875
 # makefile (from 'Makefile', line 22)
 CFLAGS = -Wall -Werror -Wextra -g
 # environment
@@ -85,7 +85,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 7)
 OBJS = $(FILES:.c=.o)
 # environment
-MANAGERPID = 904
+MANAGERPID = 887
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -101,7 +101,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1196,unix/flavio-S14BW01:/tmp/.ICE-unix/1196
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1174,unix/flavio-S14BW01:/tmp/.ICE-unix/1174
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -119,7 +119,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 1ab9d5294ca54d6aaaa3ab8dd9309d70
+INVOCATION_ID = 24315eefff084c2eab02770502f4647e
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/70/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -131,7 +131,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2085
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3642
 # automatic
 %F = $(notdir $%)
 # environment
@@ -145,7 +145,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/libft
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1144
+SSH_AGENT_PID = 1115
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -199,7 +199,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-cb48617f-d1a0-43bd-9917-6cf6f239993d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-3226a120-eb7e-4f26-8328-a21a5ea8200f.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -294,7 +294,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2159
+VSCODE_PID = 3688
 # makefile (from 'Makefile', line 1)
 FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c  ft_putendl_fd.c ft_putnbr_fd.c
 # variable set hash-table stats:
@@ -306,9 +306,9 @@ FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strl
 
 # Directories
 
-# . (device 45826, inode 1186794): 97 files, no impossibilities.
+# . (device 45826, inode 1186794): 92 files, no impossibilities.
 
-# 97 files, no impossibilities in 1 directories.
+# 92 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -319,7 +319,7 @@ FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strl
 # Not a target:
 ft_strmapi.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.837357704
+#  Last modified 2021-08-04 09:12:47.094826733
 #  File has been updated.
 #  Successfully updated.
 
@@ -332,35 +332,35 @@ ft_lstiter.o:
 # Not a target:
 ft_memcpy.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.077298213
+#  Last modified 2021-08-04 09:12:44.914877185
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_itoa.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.757355
+#  Last modified 2021-08-04 09:12:47.00282884
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_memcmp.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.877325252
+#  Last modified 2021-08-04 09:12:45.926853668
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_strlen.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.853290643
+#  Last modified 2021-08-04 09:12:44.586884856
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_isdigit.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.533279829
+#  Last modified 2021-08-04 09:12:44.214893555
 #  File has been updated.
 #  Successfully updated.
 
@@ -382,42 +382,42 @@ ft_lstlast.o:
 # Not a target:
 ft_memchr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.797322548
+#  Last modified 2021-08-04 09:12:45.830855898
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_memset.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.929293211
+#  Last modified 2021-08-04 09:12:44.690882424
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_tolower.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.485312003
+#  Last modified 2021-08-04 09:12:45.438865002
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_strrchr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.637317141
+#  Last modified 2021-08-04 09:12:45.618860822
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_strjoin.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.453344723
+#  Last modified 2021-08-04 09:12:46.662836682
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_split.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-01 07:15:39.596801279
+#  Last modified 2021-08-04 09:12:46.886831515
 #  File has been updated.
 #  Successfully updated.
 
@@ -457,7 +457,7 @@ libft: ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strle
 # Not a target:
 ft_strlcat.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.333306866
+#  Last modified 2021-08-04 09:12:45.230869832
 #  File has been updated.
 #  Successfully updated.
 
@@ -477,21 +477,21 @@ Makefile:
 # Not a target:
 ft_isprint.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.769287804
+#  Last modified 2021-08-04 09:12:44.478887382
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_striteri.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.917360408
+#  Last modified 2021-08-04 09:12:47.198824351
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_bzero.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.00529578
+#  Last modified 2021-08-04 09:12:44.798879898
 #  File has been updated.
 #  Successfully updated.
 
@@ -516,7 +516,7 @@ bonus: ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o 
 # Not a target:
 ft_putnbr_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:04.233371091
+#  Last modified 2021-08-04 09:12:47.582815556
 #  File has been updated.
 #  Successfully updated.
 
@@ -531,21 +531,21 @@ fclean: clean
 # Not a target:
 ft_calloc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.153334582
+#  Last modified 2021-08-04 09:12:46.290845261
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_substr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.341340937
+#  Last modified 2021-08-04 09:12:46.510840187
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_isalpha.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.45727726
+#  Last modified 2021-08-04 09:12:44.122895707
 #  File has been updated.
 #  Successfully updated.
 
@@ -573,7 +573,7 @@ so:
 # Not a target:
 ft_strlcpy.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.245303892
+#  Last modified 2021-08-04 09:12:45.126872248
 #  File has been updated.
 #  Successfully updated.
 
@@ -586,7 +586,7 @@ ft_lstmap.o:
 # Not a target:
 ft_strncmp.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.717319845
+#  Last modified 2021-08-04 09:12:45.73085822
 #  File has been updated.
 #  Successfully updated.
 
@@ -615,7 +615,7 @@ clean:
 # Not a target:
 ft_isalnum.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.609282397
+#  Last modified 2021-08-04 09:12:44.306891404
 #  File has been updated.
 #  Successfully updated.
 
@@ -628,7 +628,7 @@ ft_lstadd_front.o:
 # Not a target:
 ft_strdup.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.249337827
+#  Last modified 2021-08-04 09:12:46.406842586
 #  File has been updated.
 #  Successfully updated.
 
@@ -641,35 +641,35 @@ ft_lstdelone.o:
 # Not a target:
 ft_memmove.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.169301323
+#  Last modified 2021-08-04 09:12:45.034874384
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_strchr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.557314436
+#  Last modified 2021-08-04 09:12:45.534862772
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_toupper.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.409309434
+#  Last modified 2021-08-04 09:12:45.33086751
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_strnstr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:02.961328092
+#  Last modified 2021-08-04 09:12:46.046850889
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_putstr_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-01 09:29:15.150423456
+#  Last modified 2021-08-04 09:12:47.402819679
 #  File has been updated.
 #  Successfully updated.
 
@@ -682,28 +682,28 @@ main.o:
 # Not a target:
 ft_atoi.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.053331201
+#  Last modified 2021-08-04 09:12:46.154848398
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_putchar_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.989362842
+#  Last modified 2021-08-04 09:12:47.290822244
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_isascii.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:01.685284965
+#  Last modified 2021-08-04 09:12:44.394889346
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 ft_strtrim.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:03.545347833
+#  Last modified 2021-08-04 09:12:46.762834375
 #  File has been updated.
 #  Successfully updated.
 
@@ -716,7 +716,7 @@ ft_lstadd_back.o:
 # Not a target:
 ft_putendl_fd.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-07-31 19:41:04.137367846
+#  Last modified 2021-08-04 09:12:47.49881748
 #  File has been updated.
 #  Successfully updated.
 
@@ -728,12 +728,12 @@ ft_putendl_fd.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 110 / storage = 1296 B / avg = 11 B
-# current buf: size = 8162 B / used = 1296 B / count = 110 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 106 / storage = 1264 B / avg = 11 B
+# current buf: size = 8162 B / used = 1264 B / count = 106 / avg = 11 B
 
-# strcache performance: lookups = 177 / hit rate = 37%
+# strcache performance: lookups = 172 / hit rate = 38%
 # hash-table stats:
-# Load=110/8192=1%, Rehash=0, Collisions=4/177=2%
-# Finished Make data base on Tue Aug  3 05:27:47 2021
+# Load=106/8192=1%, Rehash=0, Collisions=4/172=2%
+# Finished Make data base on Thu Aug  5 11:14:41 2021
 
  
