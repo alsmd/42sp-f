@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:44:43 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:04:40 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	index;
 
 	index = 0;
+	if (!src || !dst)
+		return (0);
 	while (src[index] && index + 1 < size)
 	{
 		dst[index] = src[index];
