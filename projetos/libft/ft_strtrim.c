@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:46:00 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/03 08:47:40 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:10:54 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	size;
 	size_t	index;
 
+	if (!s1 || !set)
+		return (0);
 	index = 0;
 	size = get_size(s1, set);
 	string = (char *) ft_calloc(size + 1, sizeof(char));

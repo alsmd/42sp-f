@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:46:03 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/28 19:46:04 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:09:46 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	index;
 
 	index = 0;
+	if (!s)
+		return (0);
 	if (start > ft_strlen(s))
 		size = 0;
 	else

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 14:20:26 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/29 20:59:39 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:13:16 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	index;
 
+	
 	index = 0;
-	while (s[index])
+	if (!s)
 	{
-		write(fd, &s[index], 1);
-		index++;
+		while (s[index])
+		{
+			write(fd, &s[index], 1);
+			index++;
+		}
 	}
 	write(fd, "\n", 1);
 }

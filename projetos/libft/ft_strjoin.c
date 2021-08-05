@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:37 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/03 08:45:55 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:10:07 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	size;
 
 	if (s1 == 0 || s2 == 0)
-		return ((char *) ft_calloc(1, sizeof(char)));
+		return 0;
 	else
 	{
 		s1len = ft_strlen(s1);

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 14:20:26 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/04 09:07:14 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:13:14 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char *s, int fd)
 	int	index;
 
 	index = 0;
-	while (s[index])
+	if (!s)
 	{
-		write(fd, &s[index], 1);
-		index++;
+		while (s[index])
+		{
+			write(fd, &s[index], 1);
+			index++;
+		}
 	}
 }
