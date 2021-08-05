@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 14:12:23 by flavio            #+#    #+#             */
-/*   Updated: 2021/07/29 21:00:21 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:17:59 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	index;
 
 	index = 0;
-	while (s[index])
+	if (s)
 	{
-		f(index, &s[index]);
-		index++;
+		while (s[index])
+		{
+			f(index, &s[index]);
+			index++;
+		}
 	}
 }

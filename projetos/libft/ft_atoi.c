@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:43:40 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/04 09:06:59 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/05 16:51:33 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,35 @@ static int	is_number(char c)
 	return (0);
 }
 
+static int	get_overflow_n(int	sign)
+{
+	if (sign == 1)
+		return (-1);
+	return (0);
+}
+
 int	ft_atoi(const char *nptr)
 {
 	size_t		index;
 	int			sign;
-	long int	re;
+	int			re;
 
 	sign = 1;
 	re = 0;
 	index = 0;
-	while (is_space(nptr[index]))
-		index++;
-	if (nptr[index] == '-')
+	while (is_space(*nptr))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		sign = -1;
-		index++;
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
 	}
-	else if (nptr[index] == '+')
-		index++;
 	while (is_number(nptr[index]))
 	{
-		re = (re * 10) + (nptr[index] - 48);
-		index++;
+		if (index >= 18)
+			return (get_overflow_n(sign));
+		re = (re * 10) + (nptr[index++] - 48);
 	}
 	return (re * sign);
 }
