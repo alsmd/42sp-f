@@ -6,7 +6,7 @@ char	*fill_buffer(int fd)
 	char	*tmp;
 	int		r;
 
-	tmp = (char *) ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	tmp = (char *) malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!tmp)
 		return (0);
 	r = read(fd, tmp, BUFFER_SIZE);
@@ -15,6 +15,7 @@ char	*fill_buffer(int fd)
 		free(tmp);
 		return (0);
 	}
+	tmp[r] = '\0';
 	return (tmp);
 }
 
@@ -96,46 +97,19 @@ char	*get_next_line(int fd)
 	}
 	return (buffer->line);
 }
-/* 
-int	main(void)
+
+/* int	main(void)
 {
 	int	fd;
-	int	fd2;
 	char	*tmp;
 
-	fd = open("arquivo", O_RDONLY);
-	fd2 = open("arquivo2", O_RDONLY);
+	fd = open("./files/43_with_nl", O_RDONLY);
 
-	tmp = get_next_line(fd);
-	printf("%s", tmp);
-	free(tmp);
-
-	tmp = get_next_line(fd2);
-	printf("%s", tmp);
-	free(tmp);
-
-	tmp = get_next_line(fd2);
-	printf("%s", tmp);
-	free(tmp);
-
-	tmp = get_next_line(fd2);
-	printf("%s", tmp);
-	free(tmp);
-
-	tmp = get_next_line(fd);
-	printf("%s", tmp);
-	free(tmp);
-
-
-	tmp = get_next_line(fd);
-	printf("%s", tmp);
-	free(tmp);
-
-
-	tmp = get_next_line(fd);
-	printf("%s", tmp);
-	free(tmp);
-
+	while ((tmp = get_next_line(fd)))
+	{
+		printf("%s", tmp);
+		free(tmp);
+	}
 
 	if (errno)
 		printf("%s", strerror(errno));
