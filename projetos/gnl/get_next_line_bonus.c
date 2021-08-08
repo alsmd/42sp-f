@@ -80,25 +80,17 @@ void	get_line(t_buffer *buffer)
 
 char	*get_next_line(int fd)
 {
-	static t_buffer	*buffer;
+	static t_buffer	*begin;
+	t_buffer		*buffer;
 
-	if (!buffer)
-	{
-		buffer = ft_lstnew(fd);
-		if (!buffer)
-			return (0);
-	}
-	else if (buffer->fd != fd)
-	{
-		free(buffer);
-		buffer = ft_lstnew(fd);
-	}
+	buffer = get_buffer(&begin, fd);
+	
 	if (buffer->data == 0 && !(buffer->data = fill_buffer(fd)))
 		return (0);
 	if (buffer->line)
 		buffer->line = 0;
 	get_line(buffer);
-	if (*buffer->line == 0)
+	if (buffer->line[0] == 0)
 	{
 		free(buffer->line);
 		return (0);
