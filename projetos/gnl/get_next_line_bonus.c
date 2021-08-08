@@ -1,5 +1,4 @@
 #include "get_next_line.h"
-extern int errno;
 
 char	*fill_buffer(int fd)
 {
@@ -56,15 +55,17 @@ void	get_line(t_buffer *buffer)
 	char	*tmp;
 	int		desloc;
 
-	size = get_line_size(&buffer->data[buffer->desloc]);
+	desloc = buffer->desloc;
+	size = get_line_size(&buffer->data[desloc]);
 	if (buffer->line)
 		size += get_line_size(buffer->line);
 	tmp = (char *) ft_calloc(size + 1, sizeof(char));
 	if (buffer->line)
+	{
 		append_line(tmp, buffer->line);
-	desloc = append_line(tmp, &buffer->data[buffer->desloc]);
-	if (buffer->line)
 		free(buffer->line);
+	}
+	desloc = append_line(tmp, &buffer->data[desloc]);
 	buffer->line = tmp;
 	if (desloc == -1)
 	{
@@ -84,11 +85,9 @@ char	*get_next_line(int fd)
 	t_buffer		*buffer;
 
 	buffer = get_buffer(&begin, fd);
-	
 	if (buffer->data == 0 && !(buffer->data = fill_buffer(fd)))
 		return (0);
-	if (buffer->line)
-		buffer->line = 0;
+	buffer->line = 0;
 	get_line(buffer);
 	if (buffer->line[0] == 0)
 	{

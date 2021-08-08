@@ -13,28 +13,28 @@ BONUS_OBJS =  $(BONUS_FILES:.c=.o)
 
 INCLUDES = .
 
-NAME = libft
+NAME = libft.a
 
 MAIN = main.c
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra
 
 RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME).a $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 bonus: $(BONUS_OBJS)
-	ar rc $(NAME).a $(BONUS_OBJS)
+	ar rc $(NAME) $(BONUS_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	$(RM) $(NAME).a
+	$(RM) $(NAME)
 
 re: fclean all
 
@@ -45,4 +45,4 @@ so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES) ${BONUS_FILES}
 	gcc -nostartfiles -shared -o libft.so $(OBJS) ${BONUS_OBJS}
 
-.PHONY: run re fclean clean
+.PHONY: run re fclean clean so
