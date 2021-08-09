@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 09:16:09 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/09 10:31:39 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/09 10:37:01 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 # include <stdlib.h>
 # include <errno.h>
 # include <limits.h>
+# ifndef BUFFER_SIZE
 # define BUFFER_SIZE 1
+# endif
 /*
 	@param fd		File Descriptor
 	@param data		Where the buffer's content will stay.
