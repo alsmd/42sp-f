@@ -6,29 +6,11 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 09:16:16 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/09 10:20:51 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/09 10:34:12 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-
-char	*fill_buffer(int fd)
-{
-	char	*tmp;
-	int		r;
-
-	tmp = (char *) malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (!tmp)
-		return (0);
-	r = read(fd, tmp, BUFFER_SIZE);
-	if (r <= 0)
-	{
-		free(tmp);
-		return (0);
-	}
-	tmp[r] = '\0';
-	return (tmp);
-}
 
 size_t	get_line_size(char	*data)
 {
@@ -100,10 +82,9 @@ char	*get_next_line(int fd)
 	buffer = &list[fd];
 	buffer->fd = fd;
 	buffer->line = 0;
-	if (buffer->data == 0)
+	if (*buffer->data == 0)
 	{
-		buffer->data = fill_buffer(fd);
-		if (!(buffer->data))
+		if ((read(fd, buffer->data, BUFFER_SIZE)) <= 0)
 			return (0);
 	}
 	get_line(buffer);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 09:16:09 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/09 10:23:28 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/09 10:31:39 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <errno.h>
 # include <limits.h>
-
+# define BUFFER_SIZE 1
 /*
 	@param fd		File Descriptor
 	@param data		Where the buffer's content will stay.
@@ -29,7 +29,7 @@
 typedef struct s_buffer
 {
 	int				fd;
-	char			*data;
+	char			data[BUFFER_SIZE + 1];
 	int				desloc;
 	char			*line;
 }	t_buffer;
@@ -42,16 +42,6 @@ typedef struct s_buffer
 
 */
 char			*get_next_line(int fd);
-
-/*
-	@param	fd		File Descriptor that will be read.
-	@brief			read "n" characters from the file descriptor "fd",
-					and put the content on a new null-termineted string.
-					"n" will be get from the constant BUFFER_SIZE.
-	@return			return the data or 0 on any error.
-	
-*/
-char			*fill_buffer(int fd);
 
 /*
 	@param data		buffer's content where the line will be.
