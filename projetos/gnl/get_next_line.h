@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 09:16:09 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/09 10:34:03 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/09 10:39:26 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <errno.h>
 # include <limits.h>
-# define BUFFER_SIZE 1
+
 /*
 	@param fd		File Descriptor
 	@param data		Where the buffer's content will stay.
