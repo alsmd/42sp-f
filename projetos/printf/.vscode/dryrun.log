@@ -4,6 +4,7 @@ make -C ./libft
 clang     -c -o main.o main.c
 clang     -c -o src/ft_printf.o src/ft_printf.c
 clang     -c -o src/verify_format.o src/verify_format.c
-clang   -o ft_printf ./main.o ./src/ft_printf.o ./src/verify_format.o -L./libft -lft
+clang     -c -o src/store_info.o src/store_info.c
+clang   -o ft_printf ./main.o ./src/ft_printf.o ./src/verify_format.o ./src/store_info.o -L./libft -lft
 make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/printf'
  

@@ -4,6 +4,6 @@
 int	main(void)
 {
 	//printf("%.12dm\n", ft_atoi("123"));
-	ft_printf("ola%----------++++++++++  t        #############00000565427.4123d gente!\n");
+	ft_printf("ola \n%03.5d");
 	return (0);
 }

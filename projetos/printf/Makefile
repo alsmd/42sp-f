@@ -1,4 +1,4 @@
-SRCS = ./main.c ./src/ft_printf.c ./src/verify_format.c
+SRCS = ./main.c ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c
 
 OBJS = $(SRCS:.c=.o)
 
