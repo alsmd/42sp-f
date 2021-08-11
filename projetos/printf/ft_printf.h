@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:26:55 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/11 09:55:02 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,16 @@ typedef struct s_param
 //*****Main******//
 int	ft_printf(const char *string, ...);
 
+/*
+	@param string	The first character of the expression (ex: '-' in '%-10d')
+	@param param	Will be a struct that contains informations about how the
+					expression should be format
+	@brief			The function will check if the given expression is formatted
+					correctly.
+	@return			Return the number of characters present into the expression.
+					or 0 if the expression is bad formated.('%' does not count);
+
+*/
 int	verify_format(const char *string, t_param param);
 
 #endif

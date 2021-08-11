@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/11 09:56:13 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	ft_printf(const char *string, ...)
 			offset = verify_format(string + 1, param);
 			if (offset)
 			{
-				string = string + offset;				
+				//print the parameter with the right format
+				string += offset;				
 			}
 			else
 				write(1, string, 1);
