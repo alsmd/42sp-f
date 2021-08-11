@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/30 08:24:09 by flavio            #+#    #+#             */
+/*   Updated: 2021/07/30 08:32:47 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *string, ...)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	t_list	*begin;
+	t_list	*element;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	begin = 0;
+	while (lst)
 	{
-		if (*string == '%')
+		element = ft_lstnew(f(lst->content));
+		if (!element)
 		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
+			ft_lstclear(&begin, del);
+			return (0);
 		}
-		else
-			write(1, string, 1);
-		string++;
+		ft_lstadd_back(&begin, element);
+		lst = lst->next;
 	}
-	return (0);
+	return (begin);
 }

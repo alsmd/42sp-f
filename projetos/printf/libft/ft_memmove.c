@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/28 19:44:21 by flavio            #+#    #+#             */
+/*   Updated: 2021/07/28 19:44:22 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
+#include <stdio.h>
 
-int	ft_printf(const char *string, ...)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	size_t	index;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	index = 0;
+	if (dest > src)
 	{
-		if (*string == '%')
+		while (n >= 1)
 		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
+			((unsigned char *) dest)[n - 1] = ((unsigned char *) src)[n - 1];
+			n--;
 		}
-		else
-			write(1, string, 1);
-		string++;
 	}
-	return (0);
+	else if (dest < src)
+	{
+		while (index < n)
+		{
+			((char *) dest)[index] = ((unsigned char *) src)[index];
+			index++;
+		}
+	}
+	return (dest);
 }

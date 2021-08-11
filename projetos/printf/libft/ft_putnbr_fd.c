@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/29 13:43:24 by flavio            #+#    #+#             */
+/*   Updated: 2021/07/29 21:02:02 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *string, ...)
+static void	putnbr(int n, int fd)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	int	digit;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	digit = n % 10;
+	if (n)
 	{
-		if (*string == '%')
-		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
-		}
-		else
-			write(1, string, 1);
-		string++;
+		putnbr(n / 10, fd);
+		digit += 48;
+		write(fd, &digit, 1);
 	}
-	return (0);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == 0)
+		write(fd, "0", 1);
+	else if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
+	{
+		if (n < 0)
+		{
+			write(fd, "-", 1);
+			n *= -1;
+		}
+		putnbr(n, fd);
+	}
 }

@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/28 19:44:14 by flavio            #+#    #+#             */
+/*   Updated: 2021/07/31 08:48:21 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *string, ...)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	size_t				index;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	str1 = s1;
+	str2 = s2;
+	index = 0;
+	if (n == 0)
+		return (0);
+	while (n--)
 	{
-		if (*string == '%')
+		if (*str1 != *str2)
+			break ;
+		if (n)
 		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
+			str1++;
+			str2++;
 		}
-		else
-			write(1, string, 1);
-		string++;
+		index++;
 	}
-	return (0);
+	return (*str1 - *str2);
 }

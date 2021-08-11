@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   verify_format.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/11 09:04:01 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/11 09:38:30 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_printf(const char *string, ...)
+int	verify_format(const char *string, t_param param)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	int	mod;
+	int	size;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	size = 0;
+	mod = 0;
+	while (ft_strchr(param.flags, string[size]))
+		size++;
+	while (ft_isdigit(string[size]))
+		size++;
+	if (string[size] == '.')
 	{
-		if (*string == '%')
-		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
-		}
-		else
-			write(1, string, 1);
-		string++;
+		size++;
+		while (ft_isdigit(string[size]))
+			size++;
 	}
+	if ((ft_strchr(param.convert, string[size])))
+		return (size + 1);
 	return (0);
 }

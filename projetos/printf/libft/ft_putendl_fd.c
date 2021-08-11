@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/29 14:20:26 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/05 16:18:37 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *string, ...)
+void	ft_putendl_fd(char *s, int fd)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	int	index;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	index = 0;
+	if (s)
 	{
-		if (*string == '%')
+		while (s[index])
 		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
+			write(fd, &s[index], 1);
+			index++;
 		}
-		else
-			write(1, string, 1);
-		string++;
 	}
-	return (0);
+	write(fd, "\n", 1);
 }

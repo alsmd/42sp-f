@@ -1,4 +1,4 @@
-SRCS = ./src/main.c ./src/ft_printf.c
+SRCS = ./main.c ./src/ft_printf.c ./src/verify_format.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -10,11 +10,12 @@ CC = clang
 
 RM = rm -f
 
+LIB_SOURCE = ./libft
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-	./$(NAME)
+$(NAME): make_lib $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L$(LIB_SOURCE) -lft
 
 clean:
 	$(RM) $(OBJS)
@@ -26,4 +27,11 @@ re: fclean all
 
 run: $(NAME)
 	./$(NAME)
-.PHONY: all clean fclean re
+
+make_lib:
+	make -C $(LIB_SOURCE)
+
+lib_fclean:
+	make fclean -C $(LIB_SOURCE)
+
+.PHONY: all clean fclean re make_lib lib_fclean

@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/28 19:44:11 by flavio            #+#    #+#             */
+/*   Updated: 2021/07/31 07:42:52 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *string, ...)
+void	*ft_memchr(void *s, int c, size_t n)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	unsigned char	*temp;
+	unsigned char	find;
+	size_t			index;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	index = 0;
+	find = c;
+	temp = s;
+	while (index < n)
 	{
-		if (*string == '%')
-		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
-		}
-		else
-			write(1, string, 1);
-		string++;
+		if (temp[index] == find)
+			return (&temp[index]);
+		index++;
 	}
 	return (0);
 }

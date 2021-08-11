@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 09:33:45 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/30 07:42:04 by flavio            #+#    #+#             */
+/*   Updated: 2021/07/30 07:49:43 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *string, ...)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_param	param;
-	va_list	ptr;
-	int		offset;
+	t_list	*begin;
 
-	va_start(ptr, string);
-	param.flags = "-+0 #";
-	param.convert = "diuscpx";
-	while (*string)
+	begin = *lst;
+	if (*lst)
 	{
-		if (*string == '%')
+		while (begin->next)
 		{
-			offset = verify_format(string + 1, param);
-			if (offset)
-			{
-				string = string + offset;				
-			}
-			else
-				write(1, string, 1);
+			begin = begin->next;
 		}
-		else
-			write(1, string, 1);
-		string++;
+		begin->next = new;
 	}
-	return (0);
+	else
+		*lst = new;
 }
