@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 13:45:19 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 09:17:14 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,29 @@
 # include <stdio.h>////////////////////////////
 typedef short int	boolean;
 
-typedef struct s_param
+/*
+	@brief Assets will be the informations about what the given parameter will contain.
+			If there will be spaces before or after the content, or if 0's is necessary.
+			If there will be a prefix like '0x' or '0', and similar things.
+*/
+typedef struct s_assets
 {
-	char	*flags;
-	char	*convert;
-	char	*buffer;
-	va_list	ptr;
 	boolean	left_space;
 	boolean	right_space;
 	boolean	left_zero;
-	int		width;
+	boolean	plus_sinal;
+	boolean	space_flag;
 	int		dotte_nbr;
-	boolean	octal_prefix;
-	boolean	hexa_prefix;
+	int		width;
+	boolean	prefix;
+}	t_assets;
+typedef struct s_param
+{
+	char		*flags;
+	char		*convert;
+	char		*buffer;
+	t_assets	assets;
+	va_list	ptr;
 }	t_param;
 
 //*****Main******//
@@ -57,7 +67,28 @@ int		verify_format(const char *string, t_param *param);
 					if there will be zero or space to complete the min-width,
 					or if there will be a min-width, and informations about
 					other flags.
+	@return			returns the adress of the convertions letter (ex: s,c,i,d)
 */
-void	store_info(t_param *param, const char *string);
+char	*store_info(t_param *param, const char *string);
+
+void	print_param(t_param *param, char type);
+void	set_param_struct(t_param *param);
+
+//*****Utils******//
+/*
+	@brief		all the conversion functions will print
+				the given parameter on the screen using 
+				informations about how it should be formated.
+				For exemple the 's' ignores the precision point
+				and '0' flag, and just is formated by '-' and width.
+*/
+void	conversion_c(t_param *param);
+void	conversion_s(t_param *param);
+void	conversion_p(t_param *param);
+void	conversion_d(t_param *param);
+void	conversion_i(t_param *param);
+void	conversion_x(t_param *param);
+void	conversion_percent(t_param *param);
+void	print_char(int nbr, char c);
 
 #endif
