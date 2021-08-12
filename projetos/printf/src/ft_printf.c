@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/11 17:41:36 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 10:18:19 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_printf(const char *string, ...)
 {
-	t_param	param;
+	t_expression	expression;
 
-	set_param_struct(&param);
-	va_start(param.ptr, string);
+	set_expression_struct(&expression);
+	va_start(expression.ptr, string);
 	while (*string)
 	{
 		if (*string == '%')
 		{
-			if (verify_format(string + 1, &param))
+			if (verify_format(string + 1, &expression))
 			{
-				string = store_info(&param, string + 1);
-				print_param(&param, *string);
+				string = store_info(&expression, string + 1);
+				print_param(&expression, *string);
 			}
 			else
 				write(1, string, 1);
@@ -34,13 +34,13 @@ int	ft_printf(const char *string, ...)
 			write(1, string, 1);
 		string++;
 	}
-	va_end(param.ptr);
+	va_end(expression.ptr);
 	return (0);
 }
 
-void	set_param_struct(t_param *param)
+void	set_expression_struct(t_expression *expression)
 {
-	ft_bzero(param, sizeof(t_param));
-	param->flags = "-+0 #";
-	param->convert = "diuscpx";
+	ft_bzero(expression, sizeof(t_expression));
+	expression->flags = "-+0 #";
+	expression->types = "diuscpx";
 }

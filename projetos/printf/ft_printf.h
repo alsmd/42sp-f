@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 09:17:14 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 10:19:23 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,44 +35,44 @@ typedef struct s_assets
 	int		width;
 	boolean	prefix;
 }	t_assets;
-typedef struct s_param
+typedef struct s_expression
 {
 	char		*flags;
-	char		*convert;
+	char		*types;
 	char		*buffer;
 	t_assets	assets;
 	va_list	ptr;
-}	t_param;
+}	t_expression;
 
 //*****Main******//
 int	ft_printf(const char *string, ...);
 
 /*
-	@param string	The first character of the expression (ex: '-' in '%-10d')
-	@param param	Will be a struct that contains informations about how the
-					expression should be format
-	@brief			The function will check if the given expression is formatted
-					correctly.
-	@return			Return the number of characters present into the expression.
-					or 0 if the expression is bad formated.('%' does not count);
+	@param string		The first character of the expression (ex: '-' in '%-10d')
+	@param expression	Will be a struct that contains informations about how the
+						parameters should be format
+	@brief				The function will check if the given expression is formatted
+						correctly.
+	@return				Return the number of characters present into the expression.
+						or 0 if the expression is bad formated.('%' does not count);
 
 */
-int		verify_format(const char *string, t_param *param);
+int		verify_format(const char *string, t_expression *expression);
 
 /*
-	@param param	Will be a struct that contains informations about how the
-					expression should be format
-	@param string	The first character of the expression (ex: '-' in '%-10d')
-	@brief			Will get informations about the expression, like:
-					if there will be zero or space to complete the min-width,
-					or if there will be a min-width, and informations about
-					other flags.
-	@return			returns the adress of the convertions letter (ex: s,c,i,d)
+	@param expression	Will be a struct that contains informations about how the
+						parameters should be format
+	@param string		The first character of the expression (ex: '-' in '%-10d')
+	@brief				Will get informations about the expression, like:
+						if there will be zero or space to complete the min-width,
+						or if there will be a min-width, and informations about
+						other flags.
+	@return				returns the adress of the convertions letter (ex: s,c,i,d)
 */
-char	*store_info(t_param *param, const char *string);
+char	*store_info(t_expression *expression, const char *string);
 
-void	print_param(t_param *param, char type);
-void	set_param_struct(t_param *param);
+void	print_param(t_expression *expression, char type);
+void	set_expression_struct(t_expression *expression);
 
 //*****Utils******//
 /*
@@ -82,13 +82,13 @@ void	set_param_struct(t_param *param);
 				For exemple the 's' ignores the precision point
 				and '0' flag, and just is formated by '-' and width.
 */
-void	conversion_c(t_param *param);
-void	conversion_s(t_param *param);
-void	conversion_p(t_param *param);
-void	conversion_d(t_param *param);
-void	conversion_i(t_param *param);
-void	conversion_x(t_param *param);
-void	conversion_percent(t_param *param);
+void	conversion_c(t_expression *expression);
+void	conversion_s(t_expression *expression);
+void	conversion_p(t_expression *expression);
+void	conversion_d(t_expression *expression);
+void	conversion_i(t_expression *expression);
+void	conversion_x(t_expression *expression);
+void	conversion_percent(t_expression *expression);
 void	print_char(int nbr, char c);
 
 #endif

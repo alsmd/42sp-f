@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 14:16:01 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 08:07:39 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 10:20:01 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 
 
-void	print_param(t_param *param, char type)
+void	print_param(t_expression *expression, char type)
 {
 	int	n;
 
 	if (type == 's')
-		conversion_s(param);	
+		conversion_s(expression);	
 	if (type == 'd')
-		conversion_d(param);	
+		conversion_d(expression);	
 }
