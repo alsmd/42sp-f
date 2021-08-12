@@ -10,8 +10,8 @@ int	main(void)
 	int		fd;
 
 	fd = open("teste", O_RDONLY);
-	while ((line = get_next_line(fd)))
-		printf("%s", line);
+	line = get_next_line(fd);
+	printf("%s", line);
 
 	return (0);
 }
