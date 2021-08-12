@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 10:18:19 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 10:26:26 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_printf(const char *string, ...)
 			{
 				string = store_info(&expression, string + 1);
 				print_param(&expression, *string);
+				ft_bzero(&expression.assets, sizeof(expression.assets));
 			}
 			else
 				write(1, string, 1);
