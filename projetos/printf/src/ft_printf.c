@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 10:26:26 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 15:34:48 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ void	set_expression_struct(t_expression *expression)
 {
 	ft_bzero(expression, sizeof(t_expression));
 	expression->flags = "-+0 #";
-	expression->types = "diuscpx";
+	expression->types = "diuscpx%";
 }

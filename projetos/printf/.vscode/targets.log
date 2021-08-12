@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 12 11:23:08 2021
+# Make data base, printed on Thu Aug 12 18:17:19 2021
 
 # Variables
 
@@ -45,20 +45,18 @@ CURDIR := /home/flavio/Desktop/42sp-f/projetos/printf
 # makefile
 SHELL = /bin/sh
 # makefile (from 'Makefile', line 12)
- 
 RM = rm -f
 # environment
 SNAP_DATA = /var/snap/code/71
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:42544
+JOURNAL_STREAM = 8:44399
 # makefile (from 'Makefile', line 8)
 CFLAGS = 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
- 
 SNAP_INSTANCE_NAME = code
 # environment
 SNAP_ARCH = amd64
@@ -85,7 +83,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 4)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 956
+MANAGERPID = 1006
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -101,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1271,unix/flavio-S14BW01:/tmp/.ICE-unix/1271
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1307,unix/flavio-S14BW01:/tmp/.ICE-unix/1307
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -119,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = bf13e94fcee3469fbeed4d4e79dabe21
+INVOCATION_ID = dae586855ed9427285530874c27e4696
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -131,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 5018
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4527
 # automatic
 %F = $(notdir $%)
 # environment
@@ -145,7 +143,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/printf
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1211
+SSH_AGENT_PID = 1257
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -191,7 +189,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./main.c ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./utils/conversion_1.c ./utils/conversion_2.c ./utils/aux.c
+SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./utils/conversion_1.c ./utils/conversion_2.c ./utils/aux.c
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/71
 # environment
@@ -201,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6e0217ab-ed7e-4af3-86fc-bf99846ac5ca.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e82a4da5-f811-4768-8138-56c7e1558587.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -240,6 +238,8 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 BREAKPAD_DUMP_LOCATION = /home/flavio/.config/Code/exthost Crash Reports
+# makefile (from 'Makefile', line 16)
+MAIN = main.c
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -277,6 +277,7 @@ SUFFIXES :=
 # environment
 SNAP_REEXEC = 
 # environment
+ 
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 WINDOWPATH = 2
@@ -291,9 +292,9 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 5064
+VSCODE_PID = 4580
 # variable set hash-table stats:
-# Load=140/1024=14%, Rehash=0, Collisions=28/174=16%
+# Load=141/1024=14%, Rehash=0, Collisions=28/176=16%
 
 # Pattern-specific Variable Values
 
@@ -336,8 +337,7 @@ make_lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 34):
- 
+#  recipe to execute (from 'Makefile', line 37):
 	make -C $(LIB_SOURCE)
 
 all: libftprintf.a
@@ -376,7 +376,7 @@ utils/aux.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-12 11:21:59.831741243
+#  Last modified 2021-08-12 11:26:49.735485641
 #  File has been updated.
 #  Successfully updated.
 
@@ -385,7 +385,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 26):
+#  recipe to execute (from 'Makefile', line 28):
 	$(RM) $(NAME)
 
 # Not a target:
@@ -412,11 +412,12 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
-run: libftprintf.a
+run: libftprintf.a main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 31):
+#  recipe to execute (from 'Makefile', line 33):
+	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o)  -L. -lftprintf
 	./a.out
 
 clean:
@@ -424,7 +425,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 23):
+#  recipe to execute (from 'Makefile', line 25):
 	$(RM) $(OBJS)
 
 # Not a target:
@@ -444,17 +445,17 @@ lib_fclean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 37):
+#  recipe to execute (from 'Makefile', line 40):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib main.o src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o utils/conversion_1.o utils/conversion_2.o utils/aux.o
+libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o utils/conversion_1.o utils/conversion_2.o utils/aux.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-12 11:22:27.220536307
+#  Last modified 2021-08-12 15:36:27.031057748
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 19):
+#  recipe to execute (from 'Makefile', line 21):
 	cp $(LIB_SOURCE)/libft.a ./$(NAME)
 	ar rc $(NAME) $(OBJS)
 
@@ -478,12 +479,12 @@ src/store_info.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 328 B / avg = 10 B
-# current buf: size = 8162 B / used = 328 B / count = 32 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 321 B / avg = 10 B
+# current buf: size = 8162 B / used = 321 B / count = 32 / avg = 10 B
 
 # strcache performance: lookups = 61 / hit rate = 47%
 # hash-table stats:
 # Load=32/8192=0%, Rehash=0, Collisions=1/61=2%
-# Finished Make data base on Thu Aug 12 11:23:08 2021
+# Finished Make data base on Thu Aug 12 18:17:20 2021
 
  

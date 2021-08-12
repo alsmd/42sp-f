@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 10:19:23 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 18:48:09 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,10 @@ void	conversion_d(t_expression *expression);
 void	conversion_i(t_expression *expression);
 void	conversion_x(t_expression *expression);
 void	conversion_percent(t_expression *expression);
+
+
 void	print_char(int nbr, char c);
+void	print_hexa(long int nbr);
+int		get_hexalen(long int nbr);
 
 #endif
