@@ -1,14 +1,7 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/flavio/Desktop/42sp-f/projetos/printf'
 make -C ./libft
-clang     -c -o main.o main.c
-clang     -c -o src/ft_printf.o src/ft_printf.c
-clang     -c -o src/verify_format.o src/verify_format.c
-clang     -c -o src/store_info.o src/store_info.c
-clang     -c -o src/print_param.o src/print_param.c
-clang     -c -o utils/conversion_1.o utils/conversion_1.c
-clang     -c -o utils/conversion_2.o utils/conversion_2.c
-clang     -c -o utils/aux.o utils/aux.c
-clang   -o ft_printf ./main.o ./src/ft_printf.o ./src/verify_format.o ./src/store_info.o ./src/print_param.o ./utils/conversion_1.o ./utils/conversion_2.o ./utils/aux.o -L./libft -lft
+cp ./libft/libft.a ./libftprintf.a
+ar rc libftprintf.a ./main.o ./src/ft_printf.o ./src/verify_format.o ./src/store_info.o ./src/print_param.o ./utils/conversion_1.o ./utils/conversion_2.o ./utils/aux.o
 make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/printf'
  

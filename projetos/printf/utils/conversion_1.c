@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 17:29:22 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 10:23:25 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/12 10:39:02 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 void	conversion_c(t_expression *expression)
 {
+	char	c =  va_arg(expression->ptr, int);
 	
+	expression->assets.width--;
+	if (expression->assets.left_space || expression->assets.left_zero)
+		print_char(expression->assets.width, ' ');
+	write(1, &c, 1);
+	if (expression->assets.right_space)
+		print_char(expression->assets.width, ' ');
 }
 void	conversion_s(t_expression *expression)
 {

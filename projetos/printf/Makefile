@@ -1,9 +1,9 @@
-SRCS = ./main.c ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c \
+SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c \
 		./utils/conversion_1.c ./utils/conversion_2.c ./utils/aux.c
 
 OBJS = $(SRCS:.c=.o)
 
-NAME = ft_printf
+NAME = libftprintf.a
 
 CFLAGS = 
 
@@ -13,10 +13,13 @@ RM = rm -f
 
 LIB_SOURCE = ./libft
 
+MAIN = main.c
+
 all: $(NAME)
 
 $(NAME): make_lib $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -L$(LIB_SOURCE) -lft
+	cp $(LIB_SOURCE)/libft.a ./$(NAME)
+	ar rc $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
@@ -26,8 +29,9 @@ fclean: clean
 
 re: fclean all
 
-run: $(NAME)
-	./$(NAME)
+run: $(NAME) $(MAIN:.c=.o)
+	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o)  -L. -lftprintf
+	./a.out
 
 make_lib:
 	make -C $(LIB_SOURCE)
