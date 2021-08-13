@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 12:11:36 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 10:21:54 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/13 09:25:57 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static void print_info(t_expression *expression)
 	printf("right_space: %d\n", expression->assets.right_space);
 	printf("left_zero: %d\n", expression->assets.left_zero);
 	printf("dotte_nbr: %d\n", expression->assets.dotte_nbr);
+	printf("type: %d\n", expression->assets.type);
 }
 
 static char	*store_flags(t_expression *expression, char *string)
@@ -88,5 +89,6 @@ char	*store_info(t_expression *expression, const char *string)
 	string = store_flags(expression, (char *)string);
 	string = store_width(expression, (char *)string);
 	string = store_dotte(expression, (char *)string);
+	expression->assets.type = *string;
 	return ((char *)string);
 }

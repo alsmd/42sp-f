@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 18:48:09 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/13 10:06:31 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include "./libft/libft.h"
 # include <stdlib.h>
+# include <limits.h>
 # include <stdio.h>////////////////////////////
 typedef short int	boolean;
 
@@ -33,6 +34,7 @@ typedef struct s_assets
 	boolean	space_flag;
 	int		dotte_nbr;
 	int		width;
+	char	type;
 	boolean	prefix;
 }	t_assets;
 typedef struct s_expression
@@ -40,6 +42,7 @@ typedef struct s_expression
 	char		*flags;
 	char		*types;
 	char		*buffer;
+	int			wrote;
 	t_assets	assets;
 	va_list	ptr;
 }	t_expression;
@@ -82,17 +85,17 @@ void	set_expression_struct(t_expression *expression);
 				For exemple the 's' ignores the precision point
 				and '0' flag, and just is formated by '-' and width.
 */
-void	conversion_c(t_expression *expression);
-void	conversion_s(t_expression *expression);
-void	conversion_p(t_expression *expression);
-void	conversion_d(t_expression *expression);
-void	conversion_i(t_expression *expression);
-void	conversion_x(t_expression *expression);
-void	conversion_percent(t_expression *expression);
+void	type_s_c(t_expression *expression);
+void	type_p(t_expression *expression);
+void	type_d_i(t_expression *expression);
+void	type_u(t_expression *expression);
+void	type_x(t_expression *expression);
+void	type_percent(t_expression *expression);
 
 
 void	print_char(int nbr, char c);
 void	print_hexa(long int nbr);
 int		get_hexalen(long int nbr);
+char	*char_to_string(int c);
 
 #endif

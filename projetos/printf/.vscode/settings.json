@@ -3,6 +3,7 @@
 		"ft_printf.h": "c",
 		"stdarg.h": "c",
 		"random": "c",
-		"stdio.h": "c"
+		"stdio.h": "c",
+		"stdlib.h": "c"
 	}
 }

@@ -4,11 +4,8 @@
 int	main(void)
 {
 	char	*t ="555";
-	//printf("%.12dm\n", ft_atoi("123"));
-	//printf("%010st\n", "ola");
-	//ft_printf("%0-10.10000st\n", "ola");
-	ft_printf("% xM\n", 15);
-	printf("% xM\n", 15);
-	//printf("%p\n", "555");
+	int		number;
+
+	ft_printf("%p\n", 5);
 	return (0);
 }

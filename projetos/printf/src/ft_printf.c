@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:38 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 15:34:48 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/13 08:49:30 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,21 @@ int	ft_printf(const char *string, ...)
 	va_start(expression.ptr, string);
 	while (*string)
 	{
-		if (*string == '%')
+		if (*string == '%' && verify_format(string + 1, &expression))
 		{
-			if (verify_format(string + 1, &expression))
-			{
-				string = store_info(&expression, string + 1);
-				print_param(&expression, *string);
-				ft_bzero(&expression.assets, sizeof(expression.assets));
-			}
-			else
-				write(1, string, 1);
+			string = store_info(&expression, string + 1);
+			print_param(&expression, *string);
+			ft_bzero(&expression.assets, sizeof(expression.assets));
 		}
 		else
+		{
+			expression.wrote++;
 			write(1, string, 1);
+		}
 		string++;
 	}
 	va_end(expression.ptr);
-	return (0);
+	return (expression.wrote);
 }
 
 void	set_expression_struct(t_expression *expression)
@@ -44,4 +42,5 @@ void	set_expression_struct(t_expression *expression)
 	ft_bzero(expression, sizeof(t_expression));
 	expression->flags = "-+0 #";
 	expression->types = "diuscpx%";
+	expression->wrote = 0;
 }

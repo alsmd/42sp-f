@@ -1,15 +1,25 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.2.1
+ 
 # Built for x86_64-pc-linux-gnu
+ 
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
+ 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
 # This is free software: you are free to change and redistribute it.
+ 
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Fri Aug 13 07:29:39 2021
+ 
+# Make data base, printed on Fri Aug 13 10:11:11 2021
+ 
 
 # Variables
+ 
 
+ 
 # 'override' directive
 GNUMAKEFLAGS := 
 # automatic
@@ -156,6 +166,7 @@ HOME = /home/flavio
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
+ 
 # environment
 VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/379476f0e13988d90fab105c5c19e7abc8b1dea8
 # environment
@@ -189,7 +200,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./utils/conversion_1.c ./utils/conversion_2.c ./utils/aux.c
+SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./types/type_%.c ./types/type_d_i_u.c ./types/type_s_c.c ./types/type_p_x.c ./types/utils.c
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/71
 # environment
@@ -253,6 +264,7 @@ QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
 # environment
+ 
 SNAP_COOKIE = Nmp7u0urzrCTh7uxopxgKZgi-ao1P2QBw22J6bDPM0i8mbMGXr-B
 # environment
 LC_NUMERIC = pt_BR.UTF-8
@@ -284,7 +296,6 @@ WINDOWPATH = 2
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
 GJS_DEBUG_OUTPUT = stderr
- 
 # default
 .RECIPEPREFIX := 
 # environment
@@ -302,9 +313,9 @@ VSCODE_PID = 5343
 
 # Directories
 
-# . (device 45826, inode 267622): 14 files, no impossibilities.
+# . (device 45826, inode 267622): 13 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -362,12 +373,6 @@ src/verify_format.o:
 #  File has not been updated.
 
 # Not a target:
-utils/aux.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -376,9 +381,15 @@ utils/aux.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-12 11:26:49.735485641
+#  Last modified 2021-08-13 10:10:29.159614445
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+types/type_s_c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
@@ -395,6 +406,12 @@ src/ft_printf.o:
 #  File has not been updated.
 
 # Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 src/print_param.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -402,6 +419,12 @@ src/print_param.o:
 
 # Not a target:
 .DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+types/utils.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -429,13 +452,13 @@ clean:
 	$(RM) $(OBJS)
 
 # Not a target:
-utils/conversion_1.o:
+types/type_p_x.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-main.o:
+types/type_d_i_u.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -448,9 +471,9 @@ lib_fclean:
 #  recipe to execute (from 'Makefile', line 40):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o utils/conversion_1.o utils/conversion_2.o utils/aux.o
+libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o types/type_%.o types/type_d_i_u.o types/type_s_c.o types/type_p_x.o types/utils.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-12 21:10:35.198491276
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -460,11 +483,13 @@ libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src
 	ar rc $(NAME) $(OBJS)
 
 # Not a target:
-utils/conversion_2.o:
+types/type_%.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
+ 
 # Not a target:
 src/store_info.o:
 #  Implicit rule search has not been done.
@@ -472,19 +497,19 @@ src/store_info.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=20/1024=2%, Rehash=0, Collisions=0/54=0%
+# Load=22/1024=2%, Rehash=0, Collisions=2/58=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 33 / storage = 334 B / avg = 10 B
-# current buf: size = 8162 B / used = 334 B / count = 33 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 356 B / avg = 10 B
+# current buf: size = 8162 B / used = 356 B / count = 35 / avg = 10 B
 
-# strcache performance: lookups = 62 / hit rate = 46%
+# strcache performance: lookups = 63 / hit rate = 44%
 # hash-table stats:
-# Load=33/8192=0%, Rehash=0, Collisions=1/62=2%
-# Finished Make data base on Fri Aug 13 07:29:39 2021
+# Load=35/8192=0%, Rehash=0, Collisions=2/63=3%
+# Finished Make data base on Fri Aug 13 10:11:11 2021
 
  
