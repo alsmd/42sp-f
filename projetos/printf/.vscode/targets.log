@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 12 18:17:19 2021
+# Make data base, printed on Fri Aug 13 07:29:39 2021
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/71
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:44399
+JOURNAL_STREAM = 8:42927
 # makefile (from 'Makefile', line 8)
 CFLAGS = 
 # environment
@@ -83,7 +83,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 4)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 1006
+MANAGERPID = 894
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -99,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1307,unix/flavio-S14BW01:/tmp/.ICE-unix/1307
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1209,unix/flavio-S14BW01:/tmp/.ICE-unix/1209
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -117,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = dae586855ed9427285530874c27e4696
+INVOCATION_ID = 5d6baaf0449443ba952ab530028f327e
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -129,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4527
+GIO_LAUNCHED_DESKTOP_FILE_PID = 5295
 # automatic
 %F = $(notdir $%)
 # environment
@@ -143,7 +143,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/printf
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1257
+SSH_AGENT_PID = 1147
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -199,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e82a4da5-f811-4768-8138-56c7e1558587.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-800c2b83-47b0-491a-b81f-aa33381ace5a.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -277,7 +277,6 @@ SUFFIXES :=
 # environment
 SNAP_REEXEC = 
 # environment
- 
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 WINDOWPATH = 2
@@ -285,6 +284,7 @@ WINDOWPATH = 2
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
 GJS_DEBUG_OUTPUT = stderr
+ 
 # default
 .RECIPEPREFIX := 
 # environment
@@ -292,7 +292,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4580
+VSCODE_PID = 5343
 # variable set hash-table stats:
 # Load=141/1024=14%, Rehash=0, Collisions=28/176=16%
 
@@ -302,9 +302,9 @@ VSCODE_PID = 4580
 
 # Directories
 
-# . (device 45826, inode 267622): 13 files, no impossibilities.
+# . (device 45826, inode 267622): 14 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -450,7 +450,7 @@ lib_fclean:
 
 libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o utils/conversion_1.o utils/conversion_2.o utils/aux.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-12 15:36:27.031057748
+#  Last modified 2021-08-12 21:10:35.198491276
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -479,12 +479,12 @@ src/store_info.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 321 B / avg = 10 B
-# current buf: size = 8162 B / used = 321 B / count = 32 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 334 B / avg = 10 B
+# current buf: size = 8162 B / used = 334 B / count = 33 / avg = 10 B
 
-# strcache performance: lookups = 61 / hit rate = 47%
+# strcache performance: lookups = 62 / hit rate = 46%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=1/61=2%
-# Finished Make data base on Thu Aug 12 18:17:20 2021
+# Load=33/8192=0%, Rehash=0, Collisions=1/62=2%
+# Finished Make data base on Fri Aug 13 07:29:39 2021
 
  
