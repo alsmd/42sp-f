@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug  3 05:57:36 2021
+# Make data base, printed on Sat Aug 14 11:20:51 2021
 
 # Variables
 
@@ -32,7 +32,7 @@ VSCODE_LOG_NATIVE = false
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
 IM_CONFIG_PHASE = 1
-# makefile (from 'Makefile', line 18)
+# makefile (from 'Makefile', line 7)
 INCLUDES = .
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -43,19 +43,19 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/flavio/Desktop/42sp-f/projetos/libft/Tester
+CURDIR := /home/flavio/Desktop/42sp-f/projetos/printf/Tester
 # makefile
 SHELL = /bin/sh
-# makefile (from 'Makefile', line 28)
-RM = rm -fpwd
+# makefile (from 'Makefile', line 17)
+RM = rm -f
 # environment
-SNAP_DATA = /var/snap/code/70
+SNAP_DATA = /var/snap/code/71
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:42623
-# makefile (from 'Makefile', line 26)
-CFLAGS = -g 
+JOURNAL_STREAM = 8:41712
+# makefile (from 'Makefile', line 15)
+CFLAGS = -Wno-format-extra-args -Wno-format
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -79,23 +79,23 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/70/usr/share/code/code
+_ = /snap/code/71/usr/share/code/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# makefile (from 'Makefile', line 16)
+# makefile (from 'Makefile', line 5)
 OBJS = $(FILES:.c=.o)
 # environment
-MANAGERPID = 904
+MANAGERPID = 891
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
 VSCODE_CWD = /home/flavio
-# makefile (from 'Makefile', line 33)
+# makefile (from 'Makefile', line 22)
 VALGRIND = valgrind -q --leak-check=full
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/70/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/71/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -103,15 +103,15 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1196,unix/flavio-S14BW01:/tmp/.ICE-unix/1196
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1179,unix/flavio-S14BW01:/tmp/.ICE-unix/1179
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/flavio/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/70
+SNAP = /snap/code/71
 # environment
-SNAP_VERSION = c3f12631
+SNAP_VERSION = 379476f0
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -121,9 +121,9 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 1ab9d5294ca54d6aaaa3ab8dd9309d70
+INVOCATION_ID = e304e63d28e14952965681588ffc957e
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/70/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -133,7 +133,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2085
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6070
 # automatic
 %F = $(notdir $%)
 # environment
@@ -143,11 +143,11 @@ VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/flavio/Desktop/42sp-f/projetos/libft/Tester
+PWD = /home/flavio/Desktop/42sp-f/projetos/printf/Tester
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1144
+SSH_AGENT_PID = 1116
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -161,7 +161,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/c3f126316369cd610563c75b1b1725e0679adfb3
+VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/379476f0e13988d90fab105c5c19e7abc8b1dea8
 # environment
 LOGNAME = flavio
 # environment
@@ -193,32 +193,32 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/flavio/snap/code/70
+SNAP_USER_DATA = /home/flavio/snap/code/71
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 24)
+# makefile (from 'Makefile', line 13)
 CC = gcc
-# makefile (from 'Makefile', line 30)
+# makefile (from 'Makefile', line 19)
 UNAME = $(shell uname -s)
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-27766a4e-9da6-4b30-b03f-a914223a9f39.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b7a7b46d-f5ac-4423-8009-dddca6abda6b.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = flavio
 # environment
-SNAP_REVISION = 70
+SNAP_REVISION = 71
 # environment
 LC_MONETARY = pt_BR.UTF-8
 # makefile
 .DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 20)
+# makefile (from 'Makefile', line 9)
 NAME = Tester
-# makefile (from 'Makefile', line 22)
+# makefile (from 'Makefile', line 11)
 LIB_SOURCE = ../
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -231,7 +231,7 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.58.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.0-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -277,13 +277,13 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
- 
 SUFFIXES := 
 # environment
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
+ 
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
@@ -296,9 +296,9 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2159
+VSCODE_PID = 6118
 # makefile (from 'Makefile', line 1)
-FILES = ./tests/ft_isalpha_tester.c ./tests/main.c ./utils/check.c ./utils/title.c ./tests/ft_isdigit_tester.c ./tests/ft_isalnum_tester.c ./tests/ft_isascii_tester.c ./tests/ft_isprint_tester.c ./tests/ft_toupper_tester.c ./tests/ft_tolower_tester.c ./tests/ft_memset_tester.c ./tests/ft_bzero_tester.c ./tests/ft_memcpy_tester.c ./tests/ft_memmove_tester.c ./tests/ft_memchr_tester.c ./tests/ft_memcmp_tester.c ./tests/ft_calloc_tester.c ./utils/mcheck.c ./tests/ft_strlen_tester.c ./tests/ft_strlcpy_tester.c ./tests/ft_strlcat_tester.c ./tests/ft_strchr_tester.c ./tests/ft_strrchr_tester.c ./tests/ft_strncmp_tester.c ./tests/ft_strnstr_tester.c ./tests/ft_atoi_tester.c ./tests/ft_strdup_tester.c ./tests/ft_substr_tester.c ./tests/ft_strjoin_tester.c ./tests/ft_strtrim_tester.c ./tests/ft_split_tester.c ./tests/ft_itoa_tester.c ./tests/ft_strmapi_tester.c ./tests/ft_striteri_tester.c ./tests/ft_putchar_fd_tester.c ./tests/ft_putstr_fd_tester.c ./tests/ft_putendl_fd_tester.c ./tests/ft_putnbr_fd_tester.c ./tests/ft_lstnew_tester.c ./tests/ft_lstadd_front_tester.c ./tests/ft_lstsize_tester.c ./tests/ft_lstlast_tester.c ./tests/ft_lstadd_back_tester.c ./tests/ft_lstdelone_tester.c ./tests/ft_lstclear_tester.c ./tests/ft_lstiter_tester.c ./tests/ft_lstmap_tester.c
+FILES = ./utils/check.c ./utils/mcheck.c ./utils/title.c ./utils/redirect.c ./utils/putstr_fd.c ./tests/main.c ./tests/type_c.c ./tests/type_s.c ./tests/type_p.c ./tests/type_x.c ./tests/type_d.c ./tests/type_i.c  ./tests/type_u.c ./tests/type_%.c
 # variable set hash-table stats:
 # Load=144/1024=14%, Rehash=0, Collisions=30/181=17%
 
@@ -308,33 +308,15 @@ FILES = ./tests/ft_isalpha_tester.c ./tests/main.c ./utils/check.c ./utils/title
 
 # Directories
 
-# . (device 45826, inode 1455031): 9 files, no impossibilities.
+# . (device 45826, inode 267656): 7 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
-
-# Not a target:
-tests/ft_strlcat_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_bzero_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_isprint_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 make_lib:
 #  Phony target (prerequisite of .PHONY).
@@ -361,9 +343,15 @@ make_lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 52):
+#  recipe to execute (from 'Makefile', line 41):
 	echo "\e[0;33m"
 	make -C $(LIB_SOURCE)
+
+# Not a target:
+tests/type_i.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: run
 #  Command line target.
@@ -374,25 +362,7 @@ all: run
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
 
-# Not a target:
-tests/ft_striteri_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 .PHONY: run re fclean clean make_lib
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_lstnew_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_putnbr_fd_tester.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -404,48 +374,48 @@ tests/ft_putnbr_fd_tester.o:
 #  File has not been updated.
 
 # Not a target:
-tests/ft_calloc_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-03 05:57:33.684976042
+#  Last modified 2021-08-13 20:16:52.447852037
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-tests/ft_isalpha_tester.o:
+tests/type_c.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-tests/ft_lstsize_tester.o:
+tests/type_x.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-Tester: make_lib tests/ft_isalpha_tester.o tests/main.o utils/check.o utils/title.o tests/ft_isdigit_tester.o tests/ft_isalnum_tester.o tests/ft_isascii_tester.o tests/ft_isprint_tester.o tests/ft_toupper_tester.o tests/ft_tolower_tester.o tests/ft_memset_tester.o tests/ft_bzero_tester.o tests/ft_memcpy_tester.o tests/ft_memmove_tester.o tests/ft_memchr_tester.o tests/ft_memcmp_tester.o tests/ft_calloc_tester.o utils/mcheck.o tests/ft_strlen_tester.o tests/ft_strlcpy_tester.o tests/ft_strlcat_tester.o tests/ft_strchr_tester.o tests/ft_strrchr_tester.o tests/ft_strncmp_tester.o tests/ft_strnstr_tester.o tests/ft_atoi_tester.o tests/ft_strdup_tester.o tests/ft_substr_tester.o tests/ft_strjoin_tester.o tests/ft_strtrim_tester.o tests/ft_split_tester.o tests/ft_itoa_tester.o tests/ft_strmapi_tester.o tests/ft_striteri_tester.o tests/ft_putchar_fd_tester.o tests/ft_putstr_fd_tester.o tests/ft_putendl_fd_tester.o tests/ft_putnbr_fd_tester.o tests/ft_lstnew_tester.o tests/ft_lstadd_front_tester.o tests/ft_lstsize_tester.o tests/ft_lstlast_tester.o tests/ft_lstadd_back_tester.o tests/ft_lstdelone_tester.o tests/ft_lstclear_tester.o tests/ft_lstiter_tester.o tests/ft_lstmap_tester.o
+Tester: make_lib utils/check.o utils/mcheck.o utils/title.o utils/redirect.o utils/putstr_fd.o tests/main.o tests/type_c.o tests/type_s.o tests/type_p.o tests/type_x.o tests/type_d.o tests/type_i.o tests/type_u.o tests/type_%.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-03 05:55:42.934754123
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 38):
-	$(CC) $(CFLAGS) -o $(NAME) ${OBJS} -L$(LIB_SOURCE) -lft
+#  recipe to execute (from 'Makefile', line 27):
+	$(CC) $(CFLAGS) -o $(NAME) ${OBJS} -L$(LIB_SOURCE) -lftprintf
 
 # Not a target:
-tests/ft_strlcpy_tester.o:
+tests/type_d.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-tests/ft_lstmap_tester.o:
+tests/type_%.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+utils/redirect.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -456,61 +426,13 @@ utils/mcheck.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-tests/ft_strncmp_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_atoi_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_isalnum_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_lstadd_front_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 44):
+#  recipe to execute (from 'Makefile', line 33):
 	$(RM) $(NAME)
-
-# Not a target:
-tests/ft_strdup_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_lstdelone_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_memmove_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_strchr_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 utils/title.o:
@@ -519,25 +441,7 @@ utils/title.o:
 #  File has not been updated.
 
 # Not a target:
-tests/ft_toupper_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_substr_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_strnstr_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_putstr_fd_tester.o:
+tests/type_u.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -553,13 +457,6 @@ re: fclean all
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
-
-# Not a target:
-tests/ft_putchar_fd_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 run: Tester
 #  Phony target (prerequisite of .PHONY).
@@ -569,11 +466,11 @@ run: Tester
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 49):
+#  recipe to execute (from 'Makefile', line 38):
 	$(VALGRIND) ./$(NAME)
 
 # Not a target:
-tests/ft_isascii_tester.o:
+tests/type_p.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -583,83 +480,17 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 41):
+#  recipe to execute (from 'Makefile', line 30):
 	$(RM) $(OBJS) $(BONUS_OBJS)
 
 # Not a target:
-tests/ft_strtrim_tester.o:
+tests/type_s.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-tests/ft_lstadd_back_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_putendl_fd_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_strmapi_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_lstiter_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_memcpy_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_itoa_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_memcmp_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_strlen_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_isdigit_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_lstlast_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_memchr_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_memset_tester.o:
+utils/putstr_fd.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -676,50 +507,20 @@ tests/main.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-tests/ft_tolower_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_strrchr_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_strjoin_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_split_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/ft_lstclear_tester.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 # files hash-table stats:
-# Load=58/1024=6%, Rehash=0, Collisions=4/130=3%
+# Load=25/1024=2%, Rehash=0, Collisions=6/64=9%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 67 / storage = 1321 B / avg = 19 B
-# current buf: size = 8162 B / used = 1321 B / count = 67 / avg = 19 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 350 B / avg = 10 B
+# current buf: size = 8162 B / used = 350 B / count = 33 / avg = 10 B
 
-# strcache performance: lookups = 93 / hit rate = 27%
+# strcache performance: lookups = 58 / hit rate = 43%
 # hash-table stats:
-# Load=67/8192=1%, Rehash=0, Collisions=1/93=1%
-# Finished Make data base on Tue Aug  3 05:57:36 2021
+# Load=33/8192=0%, Rehash=0, Collisions=3/58=5%
+# Finished Make data base on Sat Aug 14 11:20:51 2021
 
  

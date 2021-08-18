@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/flavio/Desktop/42sp-f/projetos/printf'
 make -C ./libft
 clang     -c -o src/ft_printf.o src/ft_printf.c
@@ -10,7 +10,8 @@ clang     -c -o types/type_d_i_u.o types/type_d_i_u.c
 clang     -c -o types/type_s_c.o types/type_s_c.c
 clang     -c -o types/type_p_x.o types/type_p_x.c
 clang     -c -o types/utils.o types/utils.c
+clang     -c -o types/itoa_un.o types/itoa_un.c
 cp ./libft/libft.a ./libftprintf.a
-ar rc libftprintf.a ./src/ft_printf.o ./src/verify_format.o ./src/store_info.o ./src/print_param.o ./types/type_%.o ./types/type_d_i_u.o ./types/type_s_c.o ./types/type_p_x.o ./types/utils.o
+ar rc libftprintf.a ./src/ft_printf.o ./src/verify_format.o ./src/store_info.o ./src/print_param.o ./types/type_%.o ./types/type_d_i_u.o ./types/type_s_c.o ./types/type_p_x.o ./types/utils.o ./types/itoa_un.o
 make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/printf'
  

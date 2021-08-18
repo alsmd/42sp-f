@@ -1,6 +1,10 @@
 #include "../test.h"
 
+
+
 void	title(char	*string)
 {
-	printf("%s%-20s\t\t", PURPLE, string);
+
+	putstr_fd(PURPLE, 2);
+	putstr_fd(string, 2);
 }

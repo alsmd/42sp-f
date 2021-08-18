@@ -8,7 +8,7 @@ make: *** No rule to make target 'ft_isalpha.o', needed by 'libft.a'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug  7 05:39:35 2021
+# Make data base, printed on Sat Aug 14 21:00:43 2021
 
 # Variables
 
@@ -55,7 +55,7 @@ SNAP_DATA = /var/snap/code/71
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:43169
+JOURNAL_STREAM = 8:40518
 # makefile (from 'Makefile', line 22)
 CFLAGS = -Wall -Werror -Wextra
 # environment
@@ -87,7 +87,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 7)
 OBJS = $(FILES:.c=.o)
 # environment
-MANAGERPID = 888
+MANAGERPID = 890
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -103,7 +103,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1183,unix/flavio-S14BW01:/tmp/.ICE-unix/1183
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1179,unix/flavio-S14BW01:/tmp/.ICE-unix/1179
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -121,7 +121,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 8afae90ea50647b3ac5555dc7b4e6826
+INVOCATION_ID = 147a808868304cff88a827ae959e3cd5
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -133,7 +133,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2137
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4174
 # automatic
 %F = $(notdir $%)
 # environment
@@ -147,7 +147,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/libft
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1118
+SSH_AGENT_PID = 1116
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -201,7 +201,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1b404a07-096a-4323-abfc-1ceec72a6cf0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e6056e43-4cb4-438e-98f3-ea07ce15f576.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -296,7 +296,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2269
+VSCODE_PID = 4226
 # makefile (from 'Makefile', line 1)
 FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c  ft_putendl_fd.c ft_putnbr_fd.c
 # variable set hash-table stats:
@@ -674,6 +674,6 @@ ft_putendl_fd.o:
 # strcache performance: lookups = 128 / hit rate = 17%
 # hash-table stats:
 # Load=105/8192=1%, Rehash=0, Collisions=4/128=3%
-# Finished Make data base on Sat Aug  7 05:39:36 2021
+# Finished Make data base on Sat Aug 14 21:00:43 2021
 
  

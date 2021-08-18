@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 10:04:37 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/13 10:05:44 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/13 20:17:31 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	type_percent(t_expression *expression)
 {
 	write(1, "%", 1);
+	expression->wrote++;
 }

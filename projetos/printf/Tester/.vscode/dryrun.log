@@ -1,12 +1,22 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/flavio/Desktop/42sp-f/projetos/libft/Tester'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/flavio/Desktop/42sp-f/projetos/printf/Tester'
 echo "\e[0;33m"
 make -C ../
-gcc -g    -c -o tests/main.o tests/main.c
- 
-gcc -g    -c -o tests/ft_lstiter_tester.o tests/ft_lstiter_tester.c
-gcc -g    -c -o tests/ft_lstmap_tester.o tests/ft_lstmap_tester.c
-gcc -g  -o Tester ./tests/ft_isalpha_tester.o ./tests/main.o ./utils/check.o ./utils/title.o ./tests/ft_isdigit_tester.o ./tests/ft_isalnum_tester.o ./tests/ft_isascii_tester.o ./tests/ft_isprint_tester.o ./tests/ft_toupper_tester.o ./tests/ft_tolower_tester.o ./tests/ft_memset_tester.o ./tests/ft_bzero_tester.o ./tests/ft_memcpy_tester.o ./tests/ft_memmove_tester.o ./tests/ft_memchr_tester.o ./tests/ft_memcmp_tester.o ./tests/ft_calloc_tester.o ./utils/mcheck.o ./tests/ft_strlen_tester.o ./tests/ft_strlcpy_tester.o ./tests/ft_strlcat_tester.o ./tests/ft_strchr_tester.o ./tests/ft_strrchr_tester.o ./tests/ft_strncmp_tester.o ./tests/ft_strnstr_tester.o ./tests/ft_atoi_tester.o ./tests/ft_strdup_tester.o ./tests/ft_substr_tester.o ./tests/ft_strjoin_tester.o ./tests/ft_strtrim_tester.o ./tests/ft_split_tester.o ./tests/ft_itoa_tester.o ./tests/ft_strmapi_tester.o ./tests/ft_striteri_tester.o ./tests/ft_putchar_fd_tester.o ./tests/ft_putstr_fd_tester.o ./tests/ft_putendl_fd_tester.o ./tests/ft_putnbr_fd_tester.o ./tests/ft_lstnew_tester.o ./tests/ft_lstadd_front_tester.o ./tests/ft_lstsize_tester.o ./tests/ft_lstlast_tester.o ./tests/ft_lstadd_back_tester.o ./tests/ft_lstdelone_tester.o ./tests/ft_lstclear_tester.o ./tests/ft_lstiter_tester.o ./tests/ft_lstmap_tester.o -L../ -lft
+gcc -Wno-format-extra-args -Wno-format   -c -o utils/check.o utils/check.c
+gcc -Wno-format-extra-args -Wno-format   -c -o utils/mcheck.o utils/mcheck.c
+gcc -Wno-format-extra-args -Wno-format   -c -o utils/title.o utils/title.c
+gcc -Wno-format-extra-args -Wno-format   -c -o utils/redirect.o utils/redirect.c
+gcc -Wno-format-extra-args -Wno-format   -c -o utils/putstr_fd.o utils/putstr_fd.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/main.o tests/main.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_c.o tests/type_c.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_s.o tests/type_s.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_p.o tests/type_p.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_x.o tests/type_x.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_d.o tests/type_d.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_i.o tests/type_i.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_u.o tests/type_u.c
+gcc -Wno-format-extra-args -Wno-format   -c -o tests/type_%.o tests/type_%.c
+gcc -Wno-format-extra-args -Wno-format -o Tester ./utils/check.o ./utils/mcheck.o ./utils/title.o ./utils/redirect.o ./utils/putstr_fd.o ./tests/main.o ./tests/type_c.o ./tests/type_s.o ./tests/type_p.o ./tests/type_x.o ./tests/type_d.o ./tests/type_i.o ./tests/type_u.o ./tests/type_%.o -L../ -lftprintf
 valgrind -q --leak-check=full ./Tester
-make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/libft/Tester'
+make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/printf/Tester'
  

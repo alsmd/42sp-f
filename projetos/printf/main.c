@@ -1,11 +1,25 @@
 #include <stdio.h>
 #include "ft_printf.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
-int	main(void)
+static void	redirect(char *name)
 {
-	char	*t ="555";
-	int		number;
+	close(1);
+	open(name, O_WRONLY);
+}
 
-	ft_printf("%p\n", 5);
+int main(void)
+{
+	char *t = "555";
+	int number;
+
+	//redirect("a");
+	//ft_printf("%pdoideira\n", 5);
+	printf("%.3d", -10);
 	return (0);
 }
+

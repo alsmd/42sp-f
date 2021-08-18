@@ -1,5 +1,6 @@
-FILES = ./utils/check.c ./utils/mcheck.c ./utils/title.c \
-		./tests/main.c ./tests/type_c.c
+FILES = ./utils/check.c ./utils/mcheck.c ./utils/title.c ./utils/redirect.c ./utils/putstr_fd.c \
+		./tests/main.c ./tests/type_c.c ./tests/type_s.c ./tests/type_p.c ./tests/type_x.c  \
+		./tests/type_d.c ./tests/type_i.c  ./tests/type_u.c ./tests/type_%.c
 
 OBJS = $(FILES:.c=.o)
 
@@ -11,7 +12,7 @@ LIB_SOURCE = ../
 
 CC = gcc
 
-CFLAGS =
+CFLAGS = -Wno-format-extra-args -Wno-format
 
 RM = rm -f
 

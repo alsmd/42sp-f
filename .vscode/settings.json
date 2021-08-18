@@ -5,6 +5,8 @@
 		"libft.h": "c",
 		"test.h": "c",
 		"stdio.h": "c",
-		"algorithm": "c"
+		"algorithm": "c",
+		"stdarg.h": "c",
+		"types.h": "c"
 	}
 }

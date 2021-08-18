@@ -1,9 +1,19 @@
 #include "../test.h"
 
+
 void	check(short int codition)
 {
 	if (codition)
-		printf("%s OK %s", GREEN, WHITE);
+	{
+		putstr_fd(GREEN, 2);
+		putstr_fd(" OK ", 2);
+		putstr_fd(WHITE, 2);
+	}
 	else
-		printf("%s KO %s", RED, WHITE);
+	{
+		putstr_fd(RED, 2);
+		putstr_fd("KO", 2);
+		putstr_fd(WHITE, 2);
+
+	}
 }

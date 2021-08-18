@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/13 10:06:31 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/13 20:03:36 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ void	print_char(int nbr, char c);
 void	print_hexa(long int nbr);
 int		get_hexalen(long int nbr);
 char	*char_to_string(int c);
+char	*ft_itoa_un(unsigned int n);
 
 #endif

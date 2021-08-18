@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 09:35:37 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/13 10:05:55 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/16 15:23:05 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,36 +42,58 @@ void	type_d_i(t_expression *expression)
 	
 	number = va_arg(expression->ptr, int);
 	expression->buffer = ft_itoa(number);
+	expression->wrote += ft_strlen(expression->buffer);
 	if (number < 0)
+	{
+		expression->assets.width--;
 		expression->buffer++;
+	}
 	expression->assets.width -= ft_strlen(expression->buffer);
 	expression->assets.dotte_nbr -= ft_strlen(expression->buffer);
 	if (number > 0 && expression->assets.plus_sinal)
+	{
+		expression->wrote += 1;
 		expression->assets.width--;
+	}
 	if (expression->assets.dotte_nbr > 0)
+	{
 		expression->assets.width -= expression->assets.dotte_nbr;
+		expression->wrote += expression->assets.dotte_nbr;
+	}
+	if (expression->assets.width > 0)
+		expression->wrote += expression->assets.width;
 	if (expression->assets.width <= 0 && !expression->assets.plus_sinal)
 	{
-		if (expression->assets.space_flag)
+		if (expression->assets.space_flag && number >= 0)
+		{
 			write(1, " ", 1);
+			expression->wrote++;
+		}
 	}
 	print_formated_content(expression, number);
+	if (number >= 0)
+		free(expression->buffer);
+	else
+		free(expression->buffer - 1);
+	
 }
 
 void	type_u(t_expression *expression)
 {
-	unsigned	number;
+	unsigned int number;
 	
-	number = va_arg(expression->ptr, int);
-	expression->buffer = ft_itoa(number);
+	number = va_arg(expression->ptr, unsigned int);
+	expression->buffer = ft_itoa_un(number);
 	expression->assets.width -= ft_strlen(expression->buffer);
 	expression->assets.dotte_nbr -= ft_strlen(expression->buffer);
 	if (expression->assets.dotte_nbr > 0)
-		expression->assets.width -= expression->assets.dotte_nbr;
-	if (expression->assets.width <= 0)
 	{
-		if (expression->assets.space_flag)
-			write(1, " ", 1);
+		expression->assets.width -= expression->assets.dotte_nbr;
+		expression->wrote += expression->assets.dotte_nbr;
 	}
+	expression->wrote += ft_strlen(expression->buffer);
+	if (expression->assets.width > 0)
+		expression->wrote += expression->assets.width;
 	print_formated_content(expression, 0);
+	free(expression->buffer);
 }

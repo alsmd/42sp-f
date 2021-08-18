@@ -1,25 +1,15 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.2.1
- 
 # Built for x86_64-pc-linux-gnu
- 
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
- 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
- 
 # This is free software: you are free to change and redistribute it.
- 
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
- 
-# Make data base, printed on Fri Aug 13 10:11:11 2021
- 
+# Make data base, printed on Wed Aug 18 15:05:13 2021
 
 # Variables
- 
 
- 
 # 'override' directive
 GNUMAKEFLAGS := 
 # automatic
@@ -54,15 +44,15 @@ XMODIFIERS = @im=ibus
 CURDIR := /home/flavio/Desktop/42sp-f/projetos/printf
 # makefile
 SHELL = /bin/sh
-# makefile (from 'Makefile', line 12)
+# makefile (from 'Makefile', line 13)
 RM = rm -f
 # environment
 SNAP_DATA = /var/snap/code/71
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:42927
-# makefile (from 'Makefile', line 8)
+JOURNAL_STREAM = 8:45250
+# makefile (from 'Makefile', line 9)
 CFLAGS = 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
@@ -90,10 +80,10 @@ VSCODE_VERBOSE_LOGGING = true
 _ = /snap/code/71/usr/share/code/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# makefile (from 'Makefile', line 4)
+# makefile (from 'Makefile', line 5)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 894
+MANAGERPID = 923
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -109,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1209,unix/flavio-S14BW01:/tmp/.ICE-unix/1209
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1224,unix/flavio-S14BW01:/tmp/.ICE-unix/1224
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -127,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 5d6baaf0449443ba952ab530028f327e
+INVOCATION_ID = 7007d9a8a8d948b68f7698eaa1b58cf3
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -139,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 5295
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1751
 # automatic
 %F = $(notdir $%)
 # environment
@@ -153,7 +143,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/printf
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1147
+SSH_AGENT_PID = 1173
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -166,7 +156,6 @@ HOME = /home/flavio
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
- 
 # environment
 VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/379476f0e13988d90fab105c5c19e7abc8b1dea8
 # environment
@@ -200,17 +189,17 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./types/type_%.c ./types/type_d_i_u.c ./types/type_s_c.c ./types/type_p_x.c ./types/utils.c
+SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./types/type_%.c ./types/type_d_i_u.c ./types/type_s_c.c ./types/type_p_x.c ./types/utils.c ./types/itoa_un.c
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/71
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 10)
+# makefile (from 'Makefile', line 11)
 CC = clang 
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-800c2b83-47b0-491a-b81f-aa33381ace5a.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-94074e04-dabf-487e-9daa-b1240ef78cb9.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -223,9 +212,9 @@ LC_MONETARY = pt_BR.UTF-8
 .DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 6)
+# makefile (from 'Makefile', line 7)
 NAME = libftprintf.a
-# makefile (from 'Makefile', line 14)
+# makefile (from 'Makefile', line 15)
 LIB_SOURCE = ./libft
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -249,7 +238,7 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 BREAKPAD_DUMP_LOCATION = /home/flavio/.config/Code/exthost Crash Reports
-# makefile (from 'Makefile', line 16)
+# makefile (from 'Makefile', line 17)
 MAIN = main.c
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -264,7 +253,6 @@ QT_ACCESSIBILITY = 1
 # default
 MAKEFILES := 
 # environment
- 
 SNAP_COOKIE = Nmp7u0urzrCTh7uxopxgKZgi-ao1P2QBw22J6bDPM0i8mbMGXr-B
 # environment
 LC_NUMERIC = pt_BR.UTF-8
@@ -288,6 +276,7 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 SUFFIXES := 
 # environment
 SNAP_REEXEC = 
+ 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
@@ -303,7 +292,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 5343
+VSCODE_PID = 1981
 # variable set hash-table stats:
 # Load=141/1024=14%, Rehash=0, Collisions=28/176=16%
 
@@ -313,9 +302,9 @@ VSCODE_PID = 5343
 
 # Directories
 
-# . (device 45826, inode 267622): 13 files, no impossibilities.
+# . (device 45826, inode 267622): 17 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -348,7 +337,7 @@ make_lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 37):
+#  recipe to execute (from 'Makefile', line 38):
 	make -C $(LIB_SOURCE)
 
 all: libftprintf.a
@@ -381,7 +370,7 @@ src/verify_format.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-13 10:10:29.159614445
+#  Last modified 2021-08-17 12:28:46.954657268
 #  File has been updated.
 #  Successfully updated.
 
@@ -396,7 +385,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 28):
+#  recipe to execute (from 'Makefile', line 29):
 	$(RM) $(NAME)
 
 # Not a target:
@@ -439,7 +428,7 @@ run: libftprintf.a main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 33):
+#  recipe to execute (from 'Makefile', line 34):
 	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o)  -L. -lftprintf
 	./a.out
 
@@ -448,7 +437,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 25):
+#  recipe to execute (from 'Makefile', line 26):
 	$(RM) $(OBJS)
 
 # Not a target:
@@ -468,17 +457,17 @@ lib_fclean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 40):
+#  recipe to execute (from 'Makefile', line 41):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o types/type_%.o types/type_d_i_u.o types/type_s_c.o types/type_p_x.o types/utils.o
+libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o types/type_%.o types/type_d_i_u.o types/type_s_c.o types/type_p_x.o types/utils.o types/itoa_un.o
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Last modified 2021-08-17 19:26:24.323897146
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 21):
+#  recipe to execute (from 'Makefile', line 22):
 	cp $(LIB_SOURCE)/libft.a ./$(NAME)
 	ar rc $(NAME) $(OBJS)
 
@@ -487,9 +476,13 @@ types/type_%.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
- 
+# Not a target:
+types/itoa_un.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # Not a target:
 src/store_info.o:
 #  Implicit rule search has not been done.
@@ -497,19 +490,19 @@ src/store_info.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=22/1024=2%, Rehash=0, Collisions=2/58=3%
+# Load=23/1024=2%, Rehash=0, Collisions=2/60=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 356 B / avg = 10 B
-# current buf: size = 8162 B / used = 356 B / count = 35 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 389 B / avg = 9 B
+# current buf: size = 8162 B / used = 389 B / count = 39 / avg = 9 B
 
-# strcache performance: lookups = 63 / hit rate = 44%
+# strcache performance: lookups = 68 / hit rate = 42%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=2/63=3%
-# Finished Make data base on Fri Aug 13 10:11:11 2021
+# Load=39/8192=0%, Rehash=0, Collisions=2/68=3%
+# Finished Make data base on Wed Aug 18 15:05:13 2021
 
  
