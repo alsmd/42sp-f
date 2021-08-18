@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 15:53:27 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/18 20:12:52 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ typedef struct s_assets
 	boolean	plus_flag;
 	boolean	space_flag;
 	boolean	hash_flag;
+	boolean	is_negative;
+	boolean	precision;
 	int		size;
 	int		width;
 	int		wrote;
@@ -77,8 +79,35 @@ void	print_controller(t_assets *assets);
 /*print_type functions will print the parameter with the right format*/
 /*depending on the flags, width and presition point*/
 void	print_d(t_assets *assets);
+void	print_c(t_assets *assets);
 
+/*print_expression functions will print the formats of the expression */
+/*for exemple the 0's of the flag 0 or the precision point*/
+/*or the spaces to fill the min-width, or 0's to fill the min-size*/
+/*
+	@brief		Will set the width and size of the expression
+*/
+void	set_sizes(t_assets *assets, char *buffer, int number);
 
+/*
+	@brief		Will print siagn if the flags is active
+*/
+void	print_sign(t_assets *assets);
+
+/*
+	@brief		WIll print spaces or 0's based on width if the flags is active
+*/
+void	print_left(t_assets *assets);
+
+/*
+	@brief		Will print 0's based on size if the flag is active
+*/
+void	print_precision(t_assets *assets);
+
+/*
+	@brief		Will print espaces based on width if the flag is active
+*/
+void	print_right(t_assets *assets);
 
 //*****Utils******//
 void	print_char(int nbr, char c);

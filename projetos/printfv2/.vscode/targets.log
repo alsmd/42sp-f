@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 18 15:57:31 2021
+# Make data base, printed on Wed Aug 18 20:10:50 2021
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/71
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:45250
+JOURNAL_STREAM = 8:44429
 # makefile (from 'Makefile', line 8)
 CFLAGS = 
 # environment
@@ -83,7 +83,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 4)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 923
+MANAGERPID = 926
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -99,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1224,unix/flavio-S14BW01:/tmp/.ICE-unix/1224
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1221,unix/flavio-S14BW01:/tmp/.ICE-unix/1221
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -117,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 7007d9a8a8d948b68f7698eaa1b58cf3
+INVOCATION_ID = b3739d8a2c3f45baa531b80c4cb7d352
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -129,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1751
+GIO_LAUNCHED_DESKTOP_FILE_PID = 5556
 # automatic
 %F = $(notdir $%)
 # environment
@@ -143,7 +143,7 @@ PWD = /home/flavio/Desktop/42sp-f/projetos/printfv2
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1173
+SSH_AGENT_PID = 1154
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -189,7 +189,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/print_controller.c ./print_types/print_d.c
+SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/71
 # environment
@@ -199,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-57695313-fa2a-435e-8b20-f26db3c232f5.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b6fbd513-2795-4b05-ba59-5d8611afcce8.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -277,9 +277,9 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # default
 SUFFIXES := 
 # environment
+ 
 SNAP_REEXEC = 
 # environment
- 
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 WINDOWPATH = 2
@@ -294,7 +294,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1981
+VSCODE_PID = 5603
 # variable set hash-table stats:
 # Load=142/1024=14%, Rehash=0, Collisions=29/177=16%
 
@@ -304,9 +304,9 @@ VSCODE_PID = 1981
 
 # Directories
 
-# . (device 45826, inode 152126): 12 files, no impossibilities.
+# . (device 45826, inode 152126): 13 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -342,6 +342,12 @@ make_lib:
 #  recipe to execute (from 'Makefile', line 39):
 	make -C $(LIB_SOURCE)
 
+# Not a target:
+print_types/print_c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 all: libftprintf.a
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
@@ -372,7 +378,7 @@ src/verify_format.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-18 15:57:19.063635749
+#  Last modified 2021-08-18 20:10:48.031592796
 #  File has been updated.
 #  Successfully updated.
 
@@ -407,7 +413,6 @@ re: fclean all
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 run: libftprintf.a main.o
 #  Implicit rule search has not been done.
@@ -439,9 +444,9 @@ lib_fclean:
 #  recipe to execute (from 'Makefile', line 42):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/print_controller.o print_types/print_d.o
+libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-18 15:57:24.063677509
+#  Last modified 2021-08-18 20:07:46.312646576
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -457,25 +462,31 @@ print_types/print_d.o:
 #  File has not been updated.
 
 # Not a target:
+print_types/print_expression.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 src/store_info.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/50=0%
+# Load=20/1024=2%, Rehash=0, Collisions=0/54=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 286 B / avg = 9 B
-# current buf: size = 8162 B / used = 286 B / count = 29 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 352 B / avg = 11 B
+# current buf: size = 8162 B / used = 352 B / count = 32 / avg = 11 B
 
-# strcache performance: lookups = 58 / hit rate = 50%
+# strcache performance: lookups = 61 / hit rate = 47%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=1/58=2%
-# Finished Make data base on Wed Aug 18 15:57:31 2021
+# Load=32/8192=0%, Rehash=0, Collisions=1/61=2%
+# Finished Make data base on Wed Aug 18 20:10:50 2021
 
  

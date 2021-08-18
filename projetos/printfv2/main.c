@@ -14,8 +14,9 @@ static void	redirect(char *name)
 
 int main(void)
 {
-	ft_printf("%+5.3d ola mundo\n", 10);
-	printf("%.3d ola mundo", -10);
+	int	number;
+
+	//ft_printf("% +#-3.5c", 'A');
 	return (0);
 }
 

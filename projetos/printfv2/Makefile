@@ -1,5 +1,5 @@
 SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/print_controller.c \
-		./print_types/print_d.c
+		./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c
 
 OBJS = $(SRCS:.c=.o)
 

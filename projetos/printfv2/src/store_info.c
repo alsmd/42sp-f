@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 14:43:55 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 15:31:31 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/18 19:36:56 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static char	*size(char	*string, t_assets *assets)
 {
 	if (*string == '.')
 	{
+		assets->precision = 1;
 		string++;
 		while (ft_isdigit(*string))
 		{
@@ -61,5 +62,5 @@ char	*store_info(t_assets *assets, const char *string)
 	string = width((char *)string, assets);
 	string = size((char *)string, assets);
 	assets->type = *string;
-	return ((char *)string + 1);
+	return ((char *)string);
 }
