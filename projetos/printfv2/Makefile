@@ -1,5 +1,7 @@
-SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/print_controller.c \
-		./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c
+SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/utils.c \
+		./print_types/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c \
+		./print_types/print_c.c ./print_types/print_u.c \
+
 
 OBJS = $(SRCS:.c=.o)
 
@@ -20,6 +22,10 @@ INCLUDE = ./include
 all: $(NAME)
 
 $(NAME): make_lib $(OBJS)
+	cp $(LIB_SOURCE)/libft.a ./$(NAME)
+	ar rc $(NAME) $(OBJS)
+
+bonus: make_lib $(OBJS)
 	cp $(LIB_SOURCE)/libft.a ./$(NAME)
 	ar rc $(NAME) $(OBJS)
 

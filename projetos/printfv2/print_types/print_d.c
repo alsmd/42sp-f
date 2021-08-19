@@ -6,12 +6,11 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 20:07:31 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/18 21:49:53 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
-
 
 void	print_d(t_assets *assets)
 {

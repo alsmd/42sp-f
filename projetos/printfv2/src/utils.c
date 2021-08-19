@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 21:52:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:53:10 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/18 20:55:47 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/18 21:48:14 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "include/ft_printf.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#include "../include/ft_printf.h"
 
-static void	redirect(char *name)
+void	reset_assets(t_assets *assets)
 {
-	close(1);
-	open(name, O_WRONLY);
-}
-
-int	main(void)
-{
-	int	number;
-
-	number = 0;
-	return (0);
+	assets->less_flag = 0;
+	assets->zero_flag = 0;
+	assets->plus_flag = 0;
+	assets->space_flag = 0;
+	assets->hash_flag = 0;
+	assets->is_negative = 0;
+	assets->precision = 0;
+	assets->size = 0;
+	assets->width = 0;
+	assets->type = 0;
 }

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 18 20:10:50 2021
+# Make data base, printed on Wed Aug 18 21:28:09 2021
 
 # Variables
 
@@ -44,7 +44,7 @@ XMODIFIERS = @im=ibus
 CURDIR := /home/flavio/Desktop/42sp-f/projetos/printfv2
 # makefile
 SHELL = /bin/sh
-# makefile (from 'Makefile', line 12)
+# makefile (from 'Makefile', line 14)
 RM = rm -f
 # environment
 SNAP_DATA = /var/snap/code/71
@@ -52,7 +52,7 @@ SNAP_DATA = /var/snap/code/71
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 JOURNAL_STREAM = 8:44429
-# makefile (from 'Makefile', line 8)
+# makefile (from 'Makefile', line 10)
 CFLAGS = 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
@@ -80,7 +80,7 @@ VSCODE_VERBOSE_LOGGING = true
 _ = /snap/code/71/usr/share/code/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# makefile (from 'Makefile', line 4)
+# makefile (from 'Makefile', line 6)
 OBJS = $(SRCS:.c=.o)
 # environment
 MANAGERPID = 926
@@ -189,12 +189,12 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c
+SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/utils.c ./print_types/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c ./print_types/print_u.c 
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/71
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 10)
+# makefile (from 'Makefile', line 12)
 CC = clang 
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
@@ -210,13 +210,13 @@ SNAP_REVISION = 71
 LC_MONETARY = pt_BR.UTF-8
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from 'Makefile', line 18)
+# makefile (from 'Makefile', line 20)
 INCLUDE = ./include
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 6)
+# makefile (from 'Makefile', line 8)
 NAME = libftprintf.a
-# makefile (from 'Makefile', line 14)
+# makefile (from 'Makefile', line 16)
 LIB_SOURCE = ./libft
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -240,7 +240,7 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 BREAKPAD_DUMP_LOCATION = /home/flavio/.config/Code/exthost Crash Reports
-# makefile (from 'Makefile', line 16)
+# makefile (from 'Makefile', line 18)
 MAIN = main.c
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -277,13 +277,13 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # default
 SUFFIXES := 
 # environment
- 
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 WINDOWPATH = 2
 # default
+ 
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
 GJS_DEBUG_OUTPUT = stderr
@@ -296,7 +296,7 @@ LANG = C
 # environment
 VSCODE_PID = 5603
 # variable set hash-table stats:
-# Load=142/1024=14%, Rehash=0, Collisions=29/177=16%
+# Load=142/1024=14%, Rehash=0, Collisions=30/179=17%
 
 # Pattern-specific Variable Values
 
@@ -304,15 +304,21 @@ VSCODE_PID = 5603
 
 # Directories
 
-# . (device 45826, inode 152126): 13 files, no impossibilities.
+# . (device 45826, inode 152126): 12 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+print_types/print_controller.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 make_lib:
 #  Phony target (prerequisite of .PHONY).
@@ -339,7 +345,7 @@ make_lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 39):
+#  recipe to execute (from 'Makefile', line 45):
 	make -C $(LIB_SOURCE)
 
 # Not a target:
@@ -378,26 +384,40 @@ src/verify_format.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-18 20:10:48.031592796
+#  Last modified 2021-08-18 21:28:02.904969085
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/print_controller.o:
+print_types/print_u.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+bonus: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	cp $(LIB_SOURCE)/libft.a ./$(NAME)
+	ar rc $(NAME) $(OBJS)
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 30):
+#  recipe to execute (from 'Makefile', line 36):
 	$(RM) $(NAME)
 
 # Not a target:
 src/ft_printf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/utils.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -418,7 +438,7 @@ run: libftprintf.a main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 35):
+#  recipe to execute (from 'Makefile', line 41):
 	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o)  -L. -lftprintf
 	./a.out
 
@@ -427,7 +447,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 27):
+#  recipe to execute (from 'Makefile', line 33):
 	$(RM) $(OBJS)
 
 # Not a target:
@@ -441,17 +461,17 @@ lib_fclean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
+#  recipe to execute (from 'Makefile', line 48):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o
+libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-18 20:07:46.312646576
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 23):
+#  recipe to execute (from 'Makefile', line 25):
 	cp $(LIB_SOURCE)/libft.a ./$(NAME)
 	ar rc $(NAME) $(OBJS)
 
@@ -474,19 +494,19 @@ src/store_info.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=20/1024=2%, Rehash=0, Collisions=0/54=0%
+# Load=23/1024=2%, Rehash=0, Collisions=0/69=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 352 B / avg = 11 B
-# current buf: size = 8162 B / used = 352 B / count = 32 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 400 B / avg = 11 B
+# current buf: size = 8162 B / used = 400 B / count = 35 / avg = 11 B
 
-# strcache performance: lookups = 61 / hit rate = 47%
+# strcache performance: lookups = 74 / hit rate = 52%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=1/61=2%
-# Finished Make data base on Wed Aug 18 20:10:50 2021
+# Load=35/8192=0%, Rehash=0, Collisions=1/74=1%
+# Finished Make data base on Wed Aug 18 21:28:09 2021
 
  

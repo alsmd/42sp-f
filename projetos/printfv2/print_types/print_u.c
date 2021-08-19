@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 20:09:15 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:49:26 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/18 21:49:35 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 
 static void	desabilite_flags(t_assets *assets)
 {
-	assets->precision = 0;
 	assets->space_flag = 0;
-	assets->zero_flag = 0;
 	assets->plus_flag = 0;
 	assets->hash_flag = 0;
 }
 
-void	print_c(t_assets *assets)
+void	print_u(t_assets *assets)
 {
-	char	c;
+	char			*buffer;
+	unsigned int	number;
 
-	c = va_arg(assets->ptr, int);
-	assets->wrote += 1;
-	desabilite_flags(assets);
-	set_sizes(assets, " ", 0);
+	number = va_arg(assets->ptr, unsigned int);
+	buffer = ft_itoa(number);
+	assets->wrote += ft_strlen(buffer);
+	set_sizes(assets, buffer, number);
 	print_left(assets);
-	write(1, &c, 1);
+	print_precision(assets);
+	ft_putstr_fd(buffer, 1);
 	print_right(assets);
+	free(buffer);
 }
