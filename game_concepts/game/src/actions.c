@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 17:36:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 17:37:21 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 18:13:57 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@ int	key_hook(int keycode, t_game *game)
 {
 	int	vel;
 
-	vel = 50;
+	vel = 4;
+	if (keycode == D || keycode == S || keycode == A || keycode == W)
+	{
+		game->ash->frame +=1;
+		if (game->ash->frame > 3)
+			game->ash->frame = 0;
+	}
 	if (keycode == D)
 	{
 		if (game->ash->x < 1200 - 50)
@@ -46,12 +52,14 @@ int	key_hook(int keycode, t_game *game)
 int	update_frame(t_game *game)
 {
 	mlx_clear_window(game->vars->mlx, game->vars->win);
+	mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->background->img, 0, 0);
 	if (game->ash->active == 'f')
-		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->front.img, game->ash->x, game->ash->y);
+		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->front[game->ash->frame].img, game->ash->x, game->ash->y);
 	if (game->ash->active == 'l')
-		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->left.img, game->ash->x, game->ash->y);
+		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->left[game->ash->frame].img, game->ash->x, game->ash->y);
 	if (game->ash->active == 'r')
-		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->right.img, game->ash->x, game->ash->y);
+		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->right[game->ash->frame].img, game->ash->x, game->ash->y);
 	if (game->ash->active == 'b')
-		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->back.img, game->ash->x, game->ash->y);
+		mlx_put_image_to_window(game->vars->mlx, game->vars->win, game->ash->back[game->ash->frame].img, game->ash->x, game->ash->y);
+	
 }

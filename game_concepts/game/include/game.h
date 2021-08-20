@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:14:25 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 17:37:28 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 18:16:22 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,11 @@ typedef struct s_data
 }	t_data;
 typedef struct s_ash
 {
-	t_data	front;
-	t_data	left;
-	t_data	right;
-	t_data	back;
+	t_data	front[4];
+	t_data	left[4];
+	t_data	right[4];
+	t_data	back[4];
+	int		frame;
 	char	active;
 	int		x;
 	int		y;
@@ -49,6 +50,7 @@ typedef struct s_ash
 typedef struct s_game
 {
 	t_ash	*ash;
+	t_data	*background;
 	t_vars	*vars;
 }	t_game;
 
@@ -63,5 +65,6 @@ void	get_ash(t_ash *ash, t_vars *vars);
 /*Actions*/
 int	key_hook(int keycode, t_game *game);
 int	update_frame(t_game *game);
+void	clear_image(t_data *img, int width, int height);
 
 #endif

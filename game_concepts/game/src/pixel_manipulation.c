@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:15:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 16:28:58 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 18:16:59 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,25 @@ void	copy_img(t_data *dest, t_data *src, int x_src, int y_src, int width, int he
 		y = 0;
 		y_src = holder;
 		x_src++;
+		x++;
+	}
+}
+
+void	clear_image(t_data *img, int width, int height)
+{
+	int	x;
+	int	y;
+
+	x = 0;
+	y = 0;	
+	while (x < width)
+	{
+		while (y < height)
+		{
+			my_mlx_pixel_put(img, x, y, BACKGROUND);
+			y++;
+		}
+		y = 0;
 		x++;
 	}
 }
