@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 20 06:41:52 2021
+# Make data base, printed on Fri Aug 20 10:02:58 2021
 
 # Variables
 
@@ -41,7 +41,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/flavio/Desktop/42sp-f/projetos/printfv2
+CURDIR := /home/flavio/Desktop/42sp/projetos/printfv2
 # makefile
 SHELL = /bin/sh
 # makefile (from 'Makefile', line 15)
@@ -139,7 +139,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/flavio/Desktop/42sp-f/projetos/printfv2
+PWD = /home/flavio/Desktop/42sp/projetos/printfv2
 # default
 .LOADED := 
 # environment
@@ -189,7 +189,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/utils.c ./print_types/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c ./print_types/print_u.c  ./print_types/print_s.c ./print_types/print_x.c
+SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/utils.c ./print_types/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c ./print_types/print_u.c  ./print_types/print_s.c ./print_types/print_x.c ./print_types/print_p.c ./print_types/print_per.c
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
@@ -199,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-43d0c027-46f3-43a4-8ef4-d62d428979f0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-36955706-c495-42c9-abe9-d3b7390b13eb.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -209,7 +209,6 @@ SNAP_REVISION = 72
 # environment
 LC_MONETARY = pt_BR.UTF-8
 # makefile
- 
 .DEFAULT_GOAL := all
 # makefile (from 'Makefile', line 21)
 INCLUDE = ./include
@@ -277,6 +276,7 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+ 
 # environment
 SNAP_REEXEC = 
 # environment
@@ -304,9 +304,9 @@ VSCODE_PID = 5990
 
 # Directories
 
-# . (device 45826, inode 152126): 16 files, no impossibilities.
+# . (device 45826, inode 152126): 15 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -352,7 +352,6 @@ make_lib:
 print_types/print_c.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 all: libftprintf.a
@@ -391,7 +390,7 @@ src/verify_format.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-19 06:31:24.382182672
+#  Last modified 2021-08-20 10:02:51.526889933
 #  File has been updated.
 #  Successfully updated.
 
@@ -407,9 +406,20 @@ print_types/print_u.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-bonus: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o print_types/print_s.o print_types/print_x.o
+# Not a target:
+print_types/print_per.o:
 #  Implicit rule search has not been done.
- 
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+print_types/print_p.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bonus: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o print_types/print_s.o print_types/print_x.o print_types/print_p.o print_types/print_per.o
+#  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 30):
@@ -478,9 +488,9 @@ lib_fclean:
 #  recipe to execute (from 'Makefile', line 49):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o print_types/print_s.o print_types/print_x.o
+libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o print_types/print_s.o print_types/print_x.o print_types/print_p.o print_types/print_per.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-20 06:41:22.19646835
+#  Last modified 2021-08-20 10:01:00.564753378
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -508,19 +518,19 @@ src/store_info.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=25/1024=2%, Rehash=0, Collisions=3/75=4%
+# Load=27/1024=3%, Rehash=0, Collisions=3/81=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 476 B / avg = 11 B
-# current buf: size = 8162 B / used = 476 B / count = 40 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 515 B / avg = 12 B
+# current buf: size = 8162 B / used = 515 B / count = 41 / avg = 12 B
 
-# strcache performance: lookups = 82 / hit rate = 51%
+# strcache performance: lookups = 85 / hit rate = 51%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=3/82=4%
-# Finished Make data base on Fri Aug 20 06:41:52 2021
+# Load=41/8192=1%, Rehash=0, Collisions=3/85=4%
+# Finished Make data base on Fri Aug 20 10:02:58 2021
 
  

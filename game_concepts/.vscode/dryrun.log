@@ -1,7 +1,6 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/flavio/Desktop/42sp-f/game_concepts'
-gcc -g   -Imlx -Ibass -c mlx.c -o mlx.o
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/flavio/Desktop/42sp/game_concepts'
 make -C mlx
-gcc -g   -o game mlx.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
-make: Leaving directory '/home/flavio/Desktop/42sp-f/game_concepts'
+gcc -g   -o game ./game.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+make: Leaving directory '/home/flavio/Desktop/42sp/game_concepts'
  

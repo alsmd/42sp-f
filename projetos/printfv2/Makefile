@@ -1,7 +1,7 @@
 SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/utils.c \
 		./print_types/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c \
 		./print_types/print_c.c ./print_types/print_u.c  ./print_types/print_s.c \
-		./print_types/print_x.c
+		./print_types/print_x.c ./print_types/print_p.c ./print_types/print_per.c
 
 
 OBJS = $(SRCS:.c=.o)

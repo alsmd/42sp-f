@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/19 07:29:22 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 10:02:34 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,14 @@ void	print_s(t_assets *assets);
 
 //@brief	print an hexadecimal according to the flags, width and size.
 void	print_x(t_assets *assets);
+
+//@brief	print an hexadecimal adress according to the flags, width and size.
+void	print_p(t_assets *assets);
+
+//@brief	print a %.
+void	print_per(t_assets *assets);
+
+/*Utils*/
+char	*hexa_to_string(t_hexa number, t_assets *assets);
 
 #endif

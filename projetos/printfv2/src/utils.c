@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 20:55:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:48:14 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 08:24:59 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,39 @@ void	reset_assets(t_assets *assets)
 	assets->size = 0;
 	assets->width = 0;
 	assets->type = 0;
+}
+
+int	get_hexa_size(t_hexa number)
+{
+	int	size;
+
+	size = 0;
+	while (number)
+	{
+		number = number / 16;
+		size++;	
+	}
+	return (size);
+}
+
+char	*hexa_to_string(t_hexa number, t_assets *assets)
+{
+	char	*buffer;
+	char	*hexa;
+	int		size;
+	char	digit;
+	
+	if (assets->type == 'X')
+		hexa = "0123456789ABCDEF";
+	else
+		hexa = "0123456789abcdef";
+	size = get_hexa_size(number);
+	buffer = ft_calloc(size + 1, sizeof(char));
+	while (size-- > 0)
+	{
+		digit = number % 16;
+		number = number / 16;
+		buffer[size] = hexa[digit];
+	}
+	return (buffer);
 }

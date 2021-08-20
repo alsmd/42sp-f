@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:43:23 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/19 07:29:37 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 10:03:10 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,8 @@ void	print_controller(t_assets *assets)
 		print_x(assets);
 	if (assets->type == 'X')
 		print_x(assets);
+	if (assets->type == 'p')
+		print_p(assets);
+	if (assets->type == '%')
+		print_per(assets);
 }

@@ -5,33 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 21:52:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 09:23:30 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/20 16:15:26 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/20 17:37:18 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "include/ft_printf.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#include "../include/game.h"
 
-static void	redirect(char *name)
-{
-	close(1);
-	open(name, O_WRONLY);
-}
+
 
 int	main(void)
 {
-	int	number;
-	int	numbe2;
+	t_vars	vars;
+	t_data	*active_sprit;
+	t_ash	ash;
+	t_game	game;
 
 
-	ft_printf("|%p%## +30p|\n", &number, 0);
-	printf("|%p%## +30p|\n", &number, 0);
+	vars.mlx = mlx_init();
+	vars.win = mlx_new_window(vars.mlx, 1200, 600, "Images");
+	get_ash(&ash, &vars);
+	ash.active = 'f';
+	ash.x = 0;
+	ash.y = 0;
+	game.ash = &ash;
+	game.vars = &vars;
+	//mlx_put_image_to_window(game.vars->mlx, game.vars->win, game.ash->back.img, game.ash->x, game.ash->y);
+	mlx_hook(vars.win, KeyPress, KeyPressMask, key_hook, &game);
+	mlx_loop_hook(vars.mlx, update_frame, &game);
+	mlx_loop(vars.mlx);
 	return (0);
-}//                      (nil)
-// 07FFFFFFF 080000000 00FFFFFFFF 000000000000 0000FFFFFFFF 00000000000000 000000FFFFFFD6
+}

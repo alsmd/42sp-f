@@ -6,11 +6,16 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:49:53 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 07:26:16 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+
+static void	desabilite_flags(t_assets *assets)
+{
+	assets->hash_flag = 0;
+}
 
 void	print_d(t_assets *assets)
 {
@@ -19,6 +24,7 @@ void	print_d(t_assets *assets)
 	int		number;
 
 	number = va_arg(assets->ptr, int);
+	desabilite_flags(assets);
 	if (number < 0)
 	{
 		buffer = ft_itoa(number * -1);

@@ -6,17 +6,15 @@
 #    By: flavio <flavio@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 22:58:48 by mahautlat         #+#    #+#              #
-#    Updated: 2021/08/15 07:52:53 by flavio           ###   ########.fr        #
+#    Updated: 2021/08/20 17:37:42 by flavio           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = mlx.c
+SRCS = ./src/main.c ./src/pixel_manipulation.c ./src/make_ash.c ./src/actions.c
 
-SRCS_BONUS = ./bonus/main_bonus.c \
-			./bonus/itoa.c \
-			./bonus/render.c \
+SRCS_BONUS = 
 
-SRCS_MANDATORY = ./main.c \
+SRCS_MANDATORY = ./game.c
 
 OBJS 		= ${SRCS:.c=.o}
 OBJS_B		= ${SRCS_BONUS:.c=.o}

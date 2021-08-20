@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:49:35 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 07:44:44 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	print_u(t_assets *assets)
 	number = va_arg(assets->ptr, unsigned int);
 	buffer = ft_itoa(number);
 	assets->wrote += ft_strlen(buffer);
+	desabilite_flags(assets);
 	set_sizes(assets, buffer, number);
 	print_left(assets);
 	print_precision(assets);
