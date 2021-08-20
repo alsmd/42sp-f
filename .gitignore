@@ -3,3 +3,6 @@
 projetos/libft/libftTester
 projetos/libft-unit-test
 evals
+projetos/printfv2/ft_printf_tester
+projetos/printfv2/printfTester
+*a.out

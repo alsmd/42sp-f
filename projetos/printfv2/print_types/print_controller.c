@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:43:23 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:49:41 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/19 07:29:37 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,10 @@ void	print_controller(t_assets *assets)
 		print_u(assets);
 	if (assets->type == 'c')
 		print_c(assets);
+	if (assets->type == 's')
+		print_s(assets);
+	if (assets->type == 'x')
+		print_x(assets);
+	if (assets->type == 'X')
+		print_x(assets);
 }

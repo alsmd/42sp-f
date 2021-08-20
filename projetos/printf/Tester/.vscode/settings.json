@@ -1,9 +1,0 @@
-{
-	"makefile.extensionOutputFolder": "./.vscode",
-	"files.associations": {
-		"test.h": "c",
-		"unistd.h": "c",
-		"stdlib.h": "c",
-		"malloc.h": "c"
-	}
-}

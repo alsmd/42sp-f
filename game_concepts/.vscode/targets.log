@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 14 11:20:51 2021
+# Make data base, printed on Fri Aug 20 06:27:38 2021
 
 # Variables
 
@@ -28,12 +28,12 @@ SNAP_COMMON = /var/snap/code/common
 XDG_SESSION_TYPE = x11
 # environment
 VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 15)
+SRCS_BONUS = ./bonus/main_bonus.c ./bonus/itoa.c ./bonus/render.c 
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
 IM_CONFIG_PHASE = 1
-# makefile (from 'Makefile', line 7)
-INCLUDES = .
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -43,19 +43,19 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/flavio/Desktop/42sp-f/projetos/printf/Tester
+CURDIR := /home/flavio/Desktop/42sp-f/game_concepts
 # makefile
 SHELL = /bin/sh
-# makefile (from 'Makefile', line 17)
+# makefile (from 'Makefile', line 30)
 RM = rm -f
 # environment
-SNAP_DATA = /var/snap/code/71
+SNAP_DATA = /var/snap/code/72
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:41712
-# makefile (from 'Makefile', line 15)
-CFLAGS = -Wno-format-extra-args -Wno-format
+JOURNAL_STREAM = 8:44491
+# makefile (from 'Makefile', line 29)
+CFLAGS = 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -79,39 +79,41 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/71/usr/share/code/code
+_ = /snap/code/72/usr/share/code/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# makefile (from 'Makefile', line 5)
-OBJS = $(FILES:.c=.o)
+# makefile (from 'Makefile', line 21)
+OBJS = ${SRCS:.c=.o}
 # environment
-MANAGERPID = 891
+MANAGERPID = 942
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
 VSCODE_CWD = /home/flavio
-# makefile (from 'Makefile', line 22)
-VALGRIND = valgrind -q --leak-check=full
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/71/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/72/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from 'Makefile', line 27)
+PATH_MLX = mlx
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1179,unix/flavio-S14BW01:/tmp/.ICE-unix/1179
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1231,unix/flavio-S14BW01:/tmp/.ICE-unix/1231
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/flavio/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/71
+SNAP = /snap/code/72
+# makefile (from 'Makefile', line 22)
+OBJS_B = ${SRCS_BONUS:.c=.o}
 # environment
-SNAP_VERSION = 379476f0
+SNAP_VERSION = 3866c355
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -121,9 +123,9 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = e304e63d28e14952965681588ffc957e
+INVOCATION_ID = e4b63bca46b6457ca31e66e18107ae6d
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -133,21 +135,23 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6070
+GIO_LAUNCHED_DESKTOP_FILE_PID = 5492
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
+# makefile (from 'Makefile', line 19)
+SRCS_MANDATORY = ./main.c 
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/flavio/Desktop/42sp-f/projetos/printf/Tester
+PWD = /home/flavio/Desktop/42sp-f/game_concepts
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1116
+SSH_AGENT_PID = 1168
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -161,7 +165,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/379476f0e13988d90fab105c5c19e7abc8b1dea8
+VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
 # environment
 LOGNAME = flavio
 # environment
@@ -192,34 +196,32 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 13)
+SRCS = mlx.c
 # environment
-SNAP_USER_DATA = /home/flavio/snap/code/71
+SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 13)
-CC = gcc
-# makefile (from 'Makefile', line 19)
-UNAME = $(shell uname -s)
+# makefile (from 'Makefile', line 28)
+CC = gcc -g 
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b7a7b46d-f5ac-4423-8009-dddca6abda6b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-cb678a90-7e57-4674-aa06-9fb6bd106376.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = flavio
 # environment
-SNAP_REVISION = 71
+SNAP_REVISION = 72
 # environment
 LC_MONETARY = pt_BR.UTF-8
 # makefile
 .DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 9)
-NAME = Tester
-# makefile (from 'Makefile', line 11)
-LIB_SOURCE = ../
+# makefile (from 'Makefile', line 25)
+UNAME := Linux
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -231,7 +233,7 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.1-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -275,32 +277,36 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
+ 
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+# makefile (from 'Makefile', line 32)
+FLAGS = -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 # environment
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
- 
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
 GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'Makefile', line 31)
+NAME = game
 # default
 .RECIPEPREFIX := 
 # environment
 LC_ADDRESS = pt_BR.UTF-8
+# makefile (from 'Makefile', line 23)
+OBJS_M = ${SRCS_MANDATORY:.c=.o}
 # environment
 LANG = C
 # environment
-VSCODE_PID = 6118
-# makefile (from 'Makefile', line 1)
-FILES = ./utils/check.c ./utils/mcheck.c ./utils/title.c ./utils/redirect.c ./utils/putstr_fd.c ./tests/main.c ./tests/type_c.c ./tests/type_s.c ./tests/type_p.c ./tests/type_x.c ./tests/type_d.c ./tests/type_i.c  ./tests/type_u.c ./tests/type_%.c
+VSCODE_PID = 5990
 # variable set hash-table stats:
-# Load=144/1024=14%, Rehash=0, Collisions=30/181=17%
+# Load=147/1024=14%, Rehash=0, Collisions=35/183=19%
 
 # Pattern-specific Variable Values
 
@@ -308,9 +314,9 @@ FILES = ./utils/check.c ./utils/mcheck.c ./utils/title.c ./utils/redirect.c ./ut
 
 # Directories
 
-# . (device 45826, inode 267656): 7 files, no impossibilities.
+# . (device 45826, inode 1319149): 12 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -318,57 +324,22 @@ FILES = ./utils/check.c ./utils/mcheck.c ./utils/title.c ./utils/redirect.c ./ut
 
 # Files
 
-make_lib:
+all: game
 #  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := make_lib
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := 
-# automatic
-# | := 
-# automatic
-# < := 
-# automatic
-# ^ := 
-# automatic
-# ? := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 41):
-	echo "\e[0;33m"
-	make -C $(LIB_SOURCE)
-
-# Not a target:
-tests/type_i.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-all: run
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-
-.PHONY: run re fclean clean make_lib
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Successfully updated.
 
 # Not a target:
-.SUFFIXES:
+mlx.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-19 20:24:23.106689672
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: bonus all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -376,75 +347,40 @@ all: run
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-13 20:16:52.447852037
+#  Last modified 2021-08-15 07:52:53.425893073
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-tests/type_c.o:
+bonus/render.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-tests/type_x.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-Tester: make_lib utils/check.o utils/mcheck.o utils/title.o utils/redirect.o utils/putstr_fd.o tests/main.o tests/type_c.o tests/type_s.o tests/type_p.o tests/type_x.o tests/type_d.o tests/type_i.o tests/type_u.o tests/type_%.o
+bonus: mlx.o bonus/main_bonus.o bonus/itoa.o bonus/render.o
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 27):
-	$(CC) $(CFLAGS) -o $(NAME) ${OBJS} -L$(LIB_SOURCE) -lftprintf
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 44):
+			make -C $(PATH_MLX)
+			${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${OBJS_B} $(FLAGS)
 
-# Not a target:
-tests/type_d.o:
+.c.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-tests/type_%.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-utils/redirect.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-utils/mcheck.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 37):
+			${CC} ${CFLAGS} -Imlx -Ibass -c $< -o ${<:.c=.o}
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 33):
-	$(RM) $(NAME)
-
-# Not a target:
-utils/title.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/type_u.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 52):
+			make -C $(PATH_MLX) clean
+			${RM} ${NAME}
 
 # Not a target:
 .DEFAULT:
@@ -458,69 +394,50 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
-run: Tester
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 38):
-	$(VALGRIND) ./$(NAME)
-
-# Not a target:
-tests/type_p.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 30):
-	$(RM) $(OBJS) $(BONUS_OBJS)
+#  recipe to execute (from 'Makefile', line 48):
+			make -C $(PATH_MLX) clean
+			${RM} ${OBJS} ${OBJS_M} ${OBJS_B}
+
+game: mlx.o
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-19 20:24:31.247112403
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 40):
+			make -C $(PATH_MLX)
+			${CC} $(CFLAGS) -o $(NAME) $(OBJS) $(FLAGS)
 
 # Not a target:
-tests/type_s.o:
+bonus/itoa.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-utils/putstr_fd.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-utils/check.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-tests/main.o:
+bonus/main_bonus.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=25/1024=2%, Rehash=0, Collisions=6/64=9%
+# Load=15/1024=1%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 33 / storage = 350 B / avg = 10 B
-# current buf: size = 8162 B / used = 350 B / count = 33 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 223 B / avg = 8 B
+# current buf: size = 8162 B / used = 223 B / count = 26 / avg = 8 B
 
-# strcache performance: lookups = 58 / hit rate = 43%
+# strcache performance: lookups = 51 / hit rate = 49%
 # hash-table stats:
-# Load=33/8192=0%, Rehash=0, Collisions=3/58=5%
-# Finished Make data base on Sat Aug 14 11:20:51 2021
+# Load=26/8192=0%, Rehash=0, Collisions=1/51=2%
+# Finished Make data base on Fri Aug 20 06:27:38 2021
 
  

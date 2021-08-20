@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 21:52:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:53:10 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/20 06:53:41 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ static void	redirect(char *name)
 int	main(void)
 {
 	int	number;
+	int	numbe2;
 
-	number = 0;
+	ft_printf("hi %s", 0);
 	return (0);
 }
+// 07FFFFFFF 080000000 00FFFFFFFF 000000000000 0000FFFFFFFF 00000000000000 000000FFFFFFD6

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 19:43:46 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 20:27:02 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/19 07:13:15 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	set_sizes(t_assets *assets, char *buffer, int number)
 			assets->width -= assets->size;
 		if (assets->plus_flag || assets->space_flag)
 			assets->width -= 1;
+		if (assets->hash_flag && number != 0)
+			assets->width -= 2;
 		if (number < 0)
 			assets->width -= 1;
 	}

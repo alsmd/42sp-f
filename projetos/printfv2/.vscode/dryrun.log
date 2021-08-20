@@ -1,16 +1,7 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/flavio/Desktop/42sp-f/projetos/printfv2'
 make -C ./libft
-clang     -c -o src/ft_printf.o src/ft_printf.c
-clang     -c -o src/store_info.o src/store_info.c
-clang     -c -o src/verify_format.o src/verify_format.c
-clang     -c -o src/utils.o src/utils.c
-clang     -c -o print_types/print_controller.o print_types/print_controller.c
-clang     -c -o print_types/print_d.o print_types/print_d.c
-clang     -c -o print_types/print_expression.o print_types/print_expression.c
-clang     -c -o print_types/print_c.o print_types/print_c.c
-clang     -c -o print_types/print_u.o print_types/print_u.c
 cp ./libft/libft.a ./libftprintf.a
-ar rc libftprintf.a ./src/ft_printf.o ./src/store_info.o ./src/verify_format.o ./src/utils.o ./print_types/print_controller.o ./print_types/print_d.o ./print_types/print_expression.o ./print_types/print_c.o ./print_types/print_u.o
+ar rc libftprintf.a ./src/ft_printf.o ./src/store_info.o ./src/verify_format.o ./src/utils.o ./print_types/print_controller.o ./print_types/print_d.o ./print_types/print_expression.o ./print_types/print_c.o ./print_types/print_u.o ./print_types/print_s.o ./print_types/print_x.o
 make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/printfv2'
  
