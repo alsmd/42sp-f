@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 19:43:46 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/21 07:39:00 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 08:32:12 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,10 @@ void	set_sizes(t_assets *assets, char *buffer, int number)
 		assets->width -= (ft_strlen(buffer));
 		if (assets->size > 0 && assets->precision)
 			assets->width -= assets->size;
-		if (assets->plus_flag || assets->space_flag)
+		if (assets->plus_flag || assets->space_flag || number < 0)
 			assets->width -= 1;
 		if (assets->hash_flag && number != 0)
 			assets->width -= 2;
-		if (number < 0)
-			assets->width -= 1;
 	}
 }
 
@@ -76,7 +74,7 @@ void	print_left(t_assets *assets, int action)
 
 void	print_precision(t_assets *assets)
 {
-	while (assets->size > 0)
+	while (assets->size > 0 && assets->precision)
 	{
 		write(1, "0", 1);
 		assets->wrote += 1;

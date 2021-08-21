@@ -6,11 +6,28 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/21 07:44:25 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 08:42:46 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+
+static void	print_format(t_assets *assets, char *buffer, int number)
+{
+	print_left(assets, 1);
+	if (assets->hash_flag && number != 0)
+	{
+		if (assets->type == 'x')
+			write(1, "0x", 2);
+		else
+			write(1, "0X", 2);
+		assets->wrote += 2;
+	}
+	print_left(assets, 0);
+	print_precision(assets);
+	ft_putstr_fd(buffer, 1);
+	print_right(assets);
+}
 
 static void	desabilite_flags(t_assets *assets)
 {
@@ -35,18 +52,6 @@ void	print_x(t_assets *assets)
 	assets->wrote += ft_strlen(buffer);
 	desabilite_flags(assets);
 	set_sizes(assets, buffer, d);
-	print_left(assets, 1);
-	if (assets->hash_flag && number != 0)
-	{
-		if (assets->type == 'x')
-			write(1, "0x", 2);
-		else
-			write(1, "0X", 2);
-		assets->wrote += 2;
-	}
-	print_left(assets, 0);
-	print_precision(assets);
-	ft_putstr_fd(buffer, 1);
-	print_right(assets);
+	print_format(assets, buffer, d);
 	free(buffer);
 }

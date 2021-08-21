@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 20:55:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 08:24:59 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 08:44:56 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	get_hexa_size(t_hexa number)
 	while (number)
 	{
 		number = number / 16;
-		size++;	
+		size++;
 	}
 	return (size);
 }
@@ -45,7 +45,7 @@ char	*hexa_to_string(t_hexa number, t_assets *assets)
 	char	*hexa;
 	int		size;
 	char	digit;
-	
+
 	if (assets->type == 'X')
 		hexa = "0123456789ABCDEF";
 	else

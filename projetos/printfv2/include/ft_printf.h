@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/21 07:32:03 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 08:14:06 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ typedef struct s_assets
 }	t_assets;
 
 /*
+	*****Core
+*/
+/*
 	@brief		Mimic printf with flags " +-#0", precision and types "cs%pdixu"
 */
 int		ft_printf(const char *string, ...);
@@ -66,9 +69,9 @@ int		verify_format(const char *string, t_assets *assets);
 */
 char	*store_info(t_assets *assets, const char *string);
 
-//brief		Will redirect to corresponding print function of the chosen type.
-void	print_controller(t_assets *assets);
-
+/*
+	*****Print Expressions
+*/
 //@brief	Will set the width and size depending on flags and parameter's len
 void	set_sizes(t_assets *assets, char *buffer, int number);
 
@@ -85,13 +88,11 @@ void	print_precision(t_assets *assets);
 //@brief	Will print spaces based on width if the flag is active
 void	print_right(t_assets *assets);
 
-//@brief	Will reset the informations about the expression.
-void	reset_assets(t_assets *assets);
-
 /*
 	*****Print Types
 */
-
+//brief		Will redirect to corresponding print function of the chosen type.
+void	print_controller(t_assets *assets);
 //@brief	print an integer according to the flags, width and size.
 void	print_d(t_assets *assets);
 
@@ -114,6 +115,9 @@ void	print_p(t_assets *assets);
 void	print_per(t_assets *assets);
 
 /*Utils*/
+//get a unsigned long int and returns a string representing its hexadecimal.
 char	*hexa_to_string(t_hexa number, t_assets *assets);
 
+//@brief	Will reset the informations about the expression.
+void	reset_assets(t_assets *assets);
 #endif

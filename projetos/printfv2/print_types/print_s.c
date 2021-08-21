@@ -6,11 +6,19 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/21 07:35:05 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 08:38:54 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+static void	print_format(t_assets *assets, char *buffer)
+{
+	set_sizes(assets, buffer, 0);
+	print_left(assets, 1);
+	print_left(assets, 0);
+	ft_putstr_fd(buffer, 1);
+	print_right(assets);
+}
 
 static void	desabilite_flags(t_assets *assets)
 {
@@ -43,10 +51,6 @@ void	print_s(t_assets *assets)
 	}
 	assets->wrote += ft_strlen(buffer);
 	desabilite_flags(assets);
-	set_sizes(assets, buffer, 0);
-	print_left(assets, 1);
-	print_left(assets, 0);
-	ft_putstr_fd(buffer, 1);
-	print_right(assets);
+	print_format(assets, buffer);
 	free(buffer);
 }

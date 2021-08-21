@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/21 07:34:25 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 08:46:40 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,19 @@ static void	print_format(t_assets *assets, t_hexa number, char *buffer)
 {
 	print_left(assets, 1);
 	print_sign(assets);
-	if(assets->space_flag)
+	if (assets->space_flag)
 	{
 		write(1, " ", 1);
 		assets->wrote += 1;
 	}
-	if (assets->hash_flag)
-	{
-		write(1, "0x", 2);    
-		assets->wrote += 2;
-	}
+	write(1, "0x", 2);
+	assets->wrote += 2;
 	print_left(assets, 0);
 	if (number)
 		print_precision(assets);
 	ft_putstr_fd(buffer, 1);
 	print_right(assets);
 }
-
 
 static void	desabilite_flags(t_assets *assets)
 {
