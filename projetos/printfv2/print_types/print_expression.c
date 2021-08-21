@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 19:43:46 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 09:30:33 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 07:39:00 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ void	print_sign(t_assets *assets)
 	}
 }
 
-void	print_left(t_assets *assets)
+void	print_left(t_assets *assets, int action)
 {
 	if (!assets->less_flag)
 	{
-		if (assets->zero_flag && !assets->precision)
+		if ((assets->zero_flag && !assets->precision) && !action)
 		{
 			while (assets->width > 0)
 			{
@@ -62,7 +62,7 @@ void	print_left(t_assets *assets)
 				assets->width--;
 			}
 		}
-		else
+		else if ((!assets->zero_flag || assets->precision) && action)
 		{
 			while (assets->width > 0)
 			{

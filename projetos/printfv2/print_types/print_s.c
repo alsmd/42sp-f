@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 15:47:31 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 06:54:34 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 07:35:05 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ void	print_s(t_assets *assets)
 	assets->wrote += ft_strlen(buffer);
 	desabilite_flags(assets);
 	set_sizes(assets, buffer, 0);
-	print_left(assets);
+	print_left(assets, 1);
+	print_left(assets, 0);
 	ft_putstr_fd(buffer, 1);
 	print_right(assets);
 	free(buffer);

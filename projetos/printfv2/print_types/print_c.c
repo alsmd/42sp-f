@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 20:09:15 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/18 21:49:26 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 07:32:29 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	print_c(t_assets *assets)
 	assets->wrote += 1;
 	desabilite_flags(assets);
 	set_sizes(assets, " ", 0);
-	print_left(assets);
+	print_left(assets, 1);
+	print_left(assets, 0);
 	write(1, &c, 1);
 	print_right(assets);
 }

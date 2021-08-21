@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 06:01:42 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 10:02:34 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/21 07:32:03 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,8 @@ void	set_sizes(t_assets *assets, char *buffer, int number);
 void	print_sign(t_assets *assets);
 
 //@brief	WIll print spaces or 0's based on width if the flags is active
-void	print_left(t_assets *assets);
+//			if action is 0 it prints 0, otherwise it prints spaces.
+void	print_left(t_assets *assets, int action);
 
 //@brief	Will print 0's based on size if the flag is active
 void	print_precision(t_assets *assets);

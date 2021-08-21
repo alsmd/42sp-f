@@ -39,7 +39,7 @@ fclean: clean
 re: fclean all
 
 run: $(NAME) $(MAIN:.c=.o)
-	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o)  -L. -lftprintf
+	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o) print.c  -L. -lftprintf
 	./a.out
 
 make_lib:
