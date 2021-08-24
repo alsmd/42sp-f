@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 19 05:52:00 2021
+# Make data base, printed on Sun Aug 22 15:47:09 2021
 
 # Variables
 
@@ -41,18 +41,18 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/flavio/Desktop/42sp-f/projetos/printf
+CURDIR := /home/flavio/Desktop/42sp/projetos/printfv2
 # makefile
 SHELL = /bin/sh
-# makefile (from 'Makefile', line 13)
+# makefile (from 'Makefile', line 15)
 RM = rm -f
 # environment
-SNAP_DATA = /var/snap/code/71
+SNAP_DATA = /var/snap/code/72
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:41919
-# makefile (from 'Makefile', line 9)
+JOURNAL_STREAM = 8:43689
+# makefile (from 'Makefile', line 11)
 CFLAGS = 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
@@ -77,13 +77,13 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/71/usr/share/code/code
+_ = /snap/code/72/usr/share/code/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# makefile (from 'Makefile', line 5)
+# makefile (from 'Makefile', line 7)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 914
+MANAGERPID = 950
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -91,7 +91,7 @@ LC_NAME = pt_BR.UTF-8
 # environment
 VSCODE_CWD = /home/flavio
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/71/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/72/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -99,15 +99,15 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1202,unix/flavio-S14BW01:/tmp/.ICE-unix/1202
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1249,unix/flavio-S14BW01:/tmp/.ICE-unix/1249
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/flavio/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/71
+SNAP = /snap/code/72
 # environment
-SNAP_VERSION = 379476f0
+SNAP_VERSION = 3866c355
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -117,9 +117,9 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 56b4248b5f9d444984d5fbef0b3836d0
+INVOCATION_ID = b43f554cdd254a2191f23e04c60c07e0
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/71/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -129,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3730
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3422
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,11 +139,11 @@ VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/flavio/Desktop/42sp-f/projetos/printf
+PWD = /home/flavio/Desktop/42sp/projetos/printfv2
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1141
+SSH_AGENT_PID = 1200
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -157,7 +157,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/379476f0e13988d90fab105c5c19e7abc8b1dea8
+VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
 # environment
 LOGNAME = flavio
 # environment
@@ -189,32 +189,34 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/ft_printf.c ./src/verify_format.c ./src/store_info.c ./src/print_param.c ./types/type_%.c ./types/type_d_i_u.c ./types/type_s_c.c ./types/type_p_x.c ./types/utils.c ./types/itoa_un.c
+SRCS = ./src/ft_printf.c ./src/store_info.c ./src/verify_format.c ./src/utils.c ./print_types/print_controller.c ./print_types/print_d.c ./print_types/print_expression.c ./print_types/print_c.c ./print_types/print_u.c  ./print_types/print_s.c ./print_types/print_x.c ./print_types/print_p.c ./print_types/print_per.c
 # environment
-SNAP_USER_DATA = /home/flavio/snap/code/71
+SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 11)
+# makefile (from 'Makefile', line 13)
 CC = clang 
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e921b66b-7b0d-40d0-ad99-7b7691fb7a6b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-c83dba7a-2ce8-4834-afe9-27e53c2b9dc9.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = flavio
 # environment
-SNAP_REVISION = 71
+SNAP_REVISION = 72
 # environment
 LC_MONETARY = pt_BR.UTF-8
 # makefile
 .DEFAULT_GOAL := all
+# makefile (from 'Makefile', line 21)
+INCLUDE = ./include
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 7)
+# makefile (from 'Makefile', line 9)
 NAME = libftprintf.a
-# makefile (from 'Makefile', line 15)
+# makefile (from 'Makefile', line 17)
 LIB_SOURCE = ./libft
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -227,7 +229,7 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.1-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -238,7 +240,7 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 BREAKPAD_DUMP_LOCATION = /home/flavio/.config/Code/exthost Crash Reports
-# makefile (from 'Makefile', line 17)
+# makefile (from 'Makefile', line 19)
 MAIN = main.c
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -274,9 +276,9 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+ 
 # environment
 SNAP_REEXEC = 
- 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
@@ -292,9 +294,9 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3776
+VSCODE_PID = 3467
 # variable set hash-table stats:
-# Load=141/1024=14%, Rehash=0, Collisions=28/176=16%
+# Load=142/1024=14%, Rehash=0, Collisions=30/179=17%
 
 # Pattern-specific Variable Values
 
@@ -302,15 +304,21 @@ VSCODE_PID = 3776
 
 # Directories
 
-# . (device 45826, inode 267622): 16 files, no impossibilities.
+# . (device 45826, inode 152126): 13 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+print_types/print_controller.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 make_lib:
 #  Phony target (prerequisite of .PHONY).
@@ -337,8 +345,14 @@ make_lib:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 38):
+#  recipe to execute (from 'Makefile', line 46):
 	make -C $(LIB_SOURCE)
+
+# Not a target:
+print_types/print_c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: libftprintf.a
 #  Phony target (prerequisite of .PHONY).
@@ -349,6 +363,12 @@ all: libftprintf.a
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+print_types/print_x.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/verify_format.o:
@@ -370,22 +390,48 @@ src/verify_format.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-17 12:28:46.954657268
+#  Last modified 2021-08-21 06:23:09.459622739
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-types/type_s_c.o:
+print_types/print_s.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+print_types/print_u.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+print_types/print_per.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+print_types/print_p.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bonus: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o print_types/print_s.o print_types/print_x.o print_types/print_p.o print_types/print_per.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 30):
+	cp $(LIB_SOURCE)/libft.a ./$(NAME)
+	ar rc $(NAME) $(OBJS)
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 29):
+#  recipe to execute (from 'Makefile', line 37):
 	$(RM) $(NAME)
 
 # Not a target:
@@ -395,25 +441,13 @@ src/ft_printf.o:
 #  File has not been updated.
 
 # Not a target:
-main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/print_param.o:
+src/utils.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 .DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-types/utils.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -428,8 +462,8 @@ run: libftprintf.a main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 34):
-	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o)  -L. -lftprintf
+#  recipe to execute (from 'Makefile', line 42):
+	$(CC) $(CFLAGS) -o a.out $(MAIN:.c=.o) print.c  -L. -lftprintf
 	./a.out
 
 clean:
@@ -437,17 +471,11 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 26):
+#  recipe to execute (from 'Makefile', line 34):
 	$(RM) $(OBJS)
 
 # Not a target:
-types/type_p_x.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-types/type_d_i_u.o:
+main.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -457,28 +485,28 @@ lib_fclean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 41):
+#  recipe to execute (from 'Makefile', line 49):
 	make fclean -C $(LIB_SOURCE)
 
-libftprintf.a: make_lib src/ft_printf.o src/verify_format.o src/store_info.o src/print_param.o types/type_%.o types/type_d_i_u.o types/type_s_c.o types/type_p_x.o types/utils.o types/itoa_un.o
+libftprintf.a: make_lib src/ft_printf.o src/store_info.o src/verify_format.o src/utils.o print_types/print_controller.o print_types/print_d.o print_types/print_expression.o print_types/print_c.o print_types/print_u.o print_types/print_s.o print_types/print_x.o print_types/print_p.o print_types/print_per.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-17 19:26:24.323897146
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from 'Makefile', line 22):
+#  recipe to execute (from 'Makefile', line 26):
 	cp $(LIB_SOURCE)/libft.a ./$(NAME)
 	ar rc $(NAME) $(OBJS)
 
 # Not a target:
-types/type_%.o:
+print_types/print_d.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-types/itoa_un.o:
+print_types/print_expression.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -490,19 +518,19 @@ src/store_info.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=2/60=3%
+# Load=27/1024=3%, Rehash=0, Collisions=3/81=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 376 B / avg = 9 B
-# current buf: size = 8162 B / used = 376 B / count = 38 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 41 / storage = 512 B / avg = 12 B
+# current buf: size = 8162 B / used = 512 B / count = 41 / avg = 12 B
 
-# strcache performance: lookups = 67 / hit rate = 43%
+# strcache performance: lookups = 83 / hit rate = 50%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=2/67=3%
-# Finished Make data base on Thu Aug 19 05:52:00 2021
+# Load=41/8192=1%, Rehash=0, Collisions=3/83=4%
+# Finished Make data base on Sun Aug 22 15:47:10 2021
 
  

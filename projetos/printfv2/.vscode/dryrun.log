@@ -1,7 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/flavio/Desktop/42sp/projetos/printfv2'
-make -C ./libft
-cp ./libft/libft.a ./libftprintf.a
-ar rc libftprintf.a ./src/ft_printf.o ./src/store_info.o ./src/verify_format.o ./src/utils.o ./print_types/print_controller.o ./print_types/print_d.o ./print_types/print_expression.o ./print_types/print_c.o ./print_types/print_u.o ./print_types/print_s.o ./print_types/print_x.o ./print_types/print_p.o ./print_types/print_per.o
-make: Leaving directory '/home/flavio/Desktop/42sp/projetos/printfv2'
- 

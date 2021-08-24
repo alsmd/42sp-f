@@ -6,14 +6,14 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 12:13:35 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/13 19:41:26 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/18 20:48:56 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static size_t	get_size(int n)
+static size_t	get_size(unsigned int n)
 {
 	size_t	index;
 
@@ -26,12 +26,10 @@ static size_t	get_size(int n)
 	return (index);
 }
 
-static char	*set_string(unsigned int n, size_t size, int is_negative)
+static char	*set_string(unsigned int n, size_t size)
 {
 	char	*string;
 
-	if (is_negative)
-		size++;
 	string = (char *) ft_calloc(size + 1, sizeof(char));
 	if (!string)
 		return (0);
@@ -41,27 +39,15 @@ static char	*set_string(unsigned int n, size_t size, int is_negative)
 		n = n / 10;
 		size--;
 	}
-	if (is_negative)
-		string[0] = '-';
 	return (string);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(unsigned int n)
 {
 	size_t			size;
-	unsigned int	number;
-	int				is_negative;
 
-	is_negative = 0;
-	if (n < 0)
-	{
-		number = n * -1;
-		is_negative = 1;
-	}
-	else
-		number = n;
-	size = get_size(number);
-	if (number == 0)
+	size = get_size(n);
+	if (n == 0)
 		size = 1;
-	return (set_string(number, size, is_negative));
+	return (set_string(n, size));
 }

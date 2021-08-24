@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/flavio/Desktop/42sp/game_concepts/game'
+ 
+gcc -g   -Imlx -Ibass -c src/main.c -o src/main.o
+gcc -g   -Imlx -Ibass -c src/pixel_manipulation.c -o src/pixel_manipulation.o
+gcc -g   -Imlx -Ibass -c src/map.c -o src/map.o
+make -C mlx
+gcc -g   -o game ./src/main.o ./src/pixel_manipulation.o ./src/map.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+make: Leaving directory '/home/flavio/Desktop/42sp/game_concepts/game'
+ 

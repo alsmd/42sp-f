@@ -5,21 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 09:04:01 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/12 10:22:29 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/18 13:20:23 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/21 09:30:46 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../include/ft_printf.h"
 
-int	verify_format(const char *string, t_expression *expression)
+int	verify_format(const char *string)
 {
-	int	mod;
 	int	size;
 
 	size = 0;
-	mod = 0;
-	while (ft_strchr(expression->flags, string[size]))
+	while (ft_strchr(FLAGS, string[size]))
 		size++;
 	while (ft_isdigit(string[size]))
 		size++;
@@ -29,7 +27,7 @@ int	verify_format(const char *string, t_expression *expression)
 		while (ft_isdigit(string[size]))
 			size++;
 	}
-	if ((ft_strchr(expression->types, string[size])))
+	if ((ft_strchr(TYPES, string[size])))
 		return (size + 1);
 	return (0);
 }

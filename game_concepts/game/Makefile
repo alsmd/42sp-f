@@ -6,11 +6,11 @@
 #    By: flavio <flavio@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 22:58:48 by mahautlat         #+#    #+#              #
-#    Updated: 2021/08/20 17:37:42 by flavio           ###   ########.fr        #
+#    Updated: 2021/08/22 17:58:40 by flavio           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ./src/main.c ./src/pixel_manipulation.c ./src/make_ash.c ./src/actions.c
+SRCS = ./src/main.c ./src/pixel_manipulation.c ./src/map.c
 
 SRCS_BONUS = 
 

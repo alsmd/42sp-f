@@ -17,7 +17,7 @@ NAME = libft.a
 
 MAIN = main.c
 
-CC = gcc
+CC = clang
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -25,10 +25,10 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 bonus: $(BONUS_OBJS)
-	ar rc $(NAME) $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)

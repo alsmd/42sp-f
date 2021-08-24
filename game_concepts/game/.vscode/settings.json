@@ -1,0 +1,8 @@
+{
+	"makefile.extensionOutputFolder": "./.vscode",
+	"files.associations": {
+		"game.h": "c",
+		"stdio.h": "c",
+		"fcntl.h": "c"
+	}
+}

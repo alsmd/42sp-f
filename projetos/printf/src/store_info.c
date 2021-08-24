@@ -5,90 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 12:11:36 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/13 09:25:57 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/18 14:43:55 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/18 21:48:09 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../include/ft_printf.h"
 
-static void print_info(t_expression *expression)
+static char	*flags(char	*string, t_assets *assets)
 {
-	printf("width: %d\n", expression->assets.width);
-	printf("left_space: %d\n", expression->assets.left_space);
-	printf("right_space: %d\n", expression->assets.right_space);
-	printf("left_zero: %d\n", expression->assets.left_zero);
-	printf("dotte_nbr: %d\n", expression->assets.dotte_nbr);
-	printf("type: %d\n", expression->assets.type);
-}
-
-static char	*store_flags(t_expression *expression, char *string)
-{
-	while (ft_strchr(expression->flags, *string))
+	while (ft_strchr(FLAGS, *string))
 	{
-		if (*string == '-')
-		{
-			expression->assets.left_space = 0;
-			expression->assets.left_zero = 0;
-			expression->assets.right_space = 1;
-		}
-		if (*string == '0')
-		{
-			if (!(expression->assets.right_space))
-			{
-				expression->assets.left_zero = 1;
-				expression->assets.left_space = 0;
-			}
-		}
-		if (*string == '+')
-			expression->assets.plus_sinal = 1;
 		if (*string == '#')
-			expression->assets.prefix = 1;
+			assets->hash_flag = 1;
+		if (*string == '-')
+			assets->less_flag = 1;
 		if (*string == ' ')
-			expression->assets.space_flag = 1;
-		string++;
+			assets->space_flag = 1;
+		if (*string == '+')
+			assets->plus_flag = 1;
+		if (*string == '0')
+			assets->zero_flag = 1;
+		string += 1;
 	}
 	return (string);
 }
 
-static char	*store_width(t_expression *expression, char *string)
+static char	*size(char	*string, t_assets *assets)
 {
-	while (ft_isdigit(*string))
-	{
-		expression->assets.width = (expression->assets.width * 10) + (*string - 48);
-		string++;
-	}
-	return (string);
-}
-
-static char	*store_dotte(t_expression *expression, char *string)
-{
-	int	n;
-	
 	if (*string == '.')
 	{
+		assets->precision = 1;
 		string++;
 		while (ft_isdigit(*string))
 		{
-			n = expression->assets.dotte_nbr;
-			expression->assets.dotte_nbr = (n * 10) + (*string - 48);
-			if (expression->assets.left_zero == 1)
-			{
-				expression->assets.left_zero = 0;
-				expression->assets.left_space = 1;
-			}
+			assets->size = (assets-> size * 10) +(*string - 48);
 			string++;
 		}
 	}
 	return (string);
 }
 
-char	*store_info(t_expression *expression, const char *string)
+static char	*width(char	*string, t_assets *assets)
 {
-	expression->assets.left_space = 1;
-	string = store_flags(expression, (char *)string);
-	string = store_width(expression, (char *)string);
-	string = store_dotte(expression, (char *)string);
-	expression->assets.type = *string;
+	while (ft_isdigit(*string))
+	{
+		assets->width = (assets->width * 10) + (*string - 48);
+		string += 1;
+	}
+	return (string);
+}
+
+char	*store_info(t_assets *assets, const char *string)
+{
+	string = flags((char *)string, assets);
+	string = width((char *)string, assets);
+	string = size((char *)string, assets);
+	assets->type = *string;
 	return ((char *)string);
 }

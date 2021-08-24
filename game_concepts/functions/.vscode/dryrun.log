@@ -1,0 +1,8 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/flavio/Desktop/42sp/game_concepts/functions'
+ 
+gcc -g   -Imlx -Ibass -c src/array.c -o src/array.o
+make -C mlx
+gcc -g   -o game ./src/array.o ./src/pixel_manipulation.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+make: Leaving directory '/home/flavio/Desktop/42sp/game_concepts/functions'
+ 

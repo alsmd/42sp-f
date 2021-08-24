@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:15:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/20 18:16:59 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/22 16:24:29 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	my_mlx_get_pixel(t_data *data, int x, int y)
 	return (*(unsigned int*)dest);
 }
 
-void	copy_img(t_data *dest, t_data *src, int x_src, int y_src, int width, int height)
+void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, int height)
 {
 	int	pixel;
 	int	x;
@@ -55,7 +55,33 @@ void	copy_img(t_data *dest, t_data *src, int x_src, int y_src, int width, int he
 	}
 }
 
-void	clear_image(t_data *img, int width, int height)
+void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, int height)
+{
+	int	pixel;
+	int	x;
+	int	y;
+	int	holder;
+
+	x = 0;
+	y = 0;
+	holder = y_dest;
+	while (x < width)
+	{
+		while (y < height)
+		{
+			pixel = my_mlx_get_pixel(src, x, y);
+			my_mlx_pixel_put(dest, x_dest, y_dest, pixel);
+			y++;
+			y_dest++;
+		}
+		y = 0;
+		y_dest = holder;
+		x_dest++;
+		x++;
+	}
+}
+
+void	clear_image(t_data *img, int width, int height, int color)
 {
 	int	x;
 	int	y;
@@ -66,7 +92,7 @@ void	clear_image(t_data *img, int width, int height)
 	{
 		while (y < height)
 		{
-			my_mlx_pixel_put(img, x, y, BACKGROUND);
+			my_mlx_pixel_put(img, x, y, color);
 			y++;
 		}
 		y = 0;

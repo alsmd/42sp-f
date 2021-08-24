@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 20:03:57 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/09 09:20:09 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/18 16:14:25 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -373,11 +373,11 @@ char	**ft_split(char const *s, char c);
 /*
 	@param (n)		The integer to be converted.
 	@brief			Create an string representing the integer 'n'.
-					Negative numbers must be handled.
+					Negative numbers is not handled.
 	@return			The string represeting the integer.
 					Null if the allocations fails.
 */
-char	*ft_itoa(int n);
+char	*ft_itoa(unsigned int n);
 
 /*
 	@param (s)		The string on which to iterate.

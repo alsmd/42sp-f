@@ -1,11 +1,7 @@
 {
 	"files.associations": {
 		"ft_printf.h": "c",
-		"stdarg.h": "c",
-		"random": "c",
-		"stdio.h": "c",
 		"stdlib.h": "c",
-		"fcntl.h": "c",
-		"test.h": "c"
+		"stdio.h": "c"
 	}
 }

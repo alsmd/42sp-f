@@ -1,17 +1,20 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/flavio/Desktop/42sp-f/projetos/printf'
+make: Entering directory '/home/flavio/Desktop/42sp/projetos/printfv2'
 make -C ./libft
 clang     -c -o src/ft_printf.o src/ft_printf.c
-clang     -c -o src/verify_format.o src/verify_format.c
 clang     -c -o src/store_info.o src/store_info.c
-clang     -c -o src/print_param.o src/print_param.c
-clang     -c -o types/type_%.o types/type_%.c
-clang     -c -o types/type_d_i_u.o types/type_d_i_u.c
-clang     -c -o types/type_s_c.o types/type_s_c.c
-clang     -c -o types/type_p_x.o types/type_p_x.c
-clang     -c -o types/utils.o types/utils.c
-clang     -c -o types/itoa_un.o types/itoa_un.c
+clang     -c -o src/verify_format.o src/verify_format.c
+clang     -c -o src/utils.o src/utils.c
+clang     -c -o print_types/print_controller.o print_types/print_controller.c
+clang     -c -o print_types/print_d.o print_types/print_d.c
+clang     -c -o print_types/print_expression.o print_types/print_expression.c
+clang     -c -o print_types/print_c.o print_types/print_c.c
+clang     -c -o print_types/print_u.o print_types/print_u.c
+clang     -c -o print_types/print_s.o print_types/print_s.c
+clang     -c -o print_types/print_x.o print_types/print_x.c
+clang     -c -o print_types/print_p.o print_types/print_p.c
+clang     -c -o print_types/print_per.o print_types/print_per.c
 cp ./libft/libft.a ./libftprintf.a
-ar rc libftprintf.a ./src/ft_printf.o ./src/verify_format.o ./src/store_info.o ./src/print_param.o ./types/type_%.o ./types/type_d_i_u.o ./types/type_s_c.o ./types/type_p_x.o ./types/utils.o ./types/itoa_un.o
-make: Leaving directory '/home/flavio/Desktop/42sp-f/projetos/printf'
+ar rc libftprintf.a ./src/ft_printf.o ./src/store_info.o ./src/verify_format.o ./src/utils.o ./print_types/print_controller.o ./print_types/print_d.o ./print_types/print_expression.o ./print_types/print_c.o ./print_types/print_u.o ./print_types/print_s.o ./print_types/print_x.o ./print_types/print_p.o ./print_types/print_per.o
+make: Leaving directory '/home/flavio/Desktop/42sp/projetos/printfv2'
  
