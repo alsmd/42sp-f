@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/flavio/Desktop/42sp/game_concepts/conectar_pontos'
+clang -g -Imlx -Ibass -c main.c -o main.o
+clang -g -Imlx -Ibass -c pixel_manipulation.c -o pixel_manipulation.o
+make -C mlx
+clang -g -o so_long main.o pixel_manipulation.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+make: Leaving directory '/home/flavio/Desktop/42sp/game_concepts/conectar_pontos'
+ 

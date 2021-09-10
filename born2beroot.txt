@@ -1,0 +1,27 @@
+Born2beRoot
+
+*logar na rede local
+Debian
+*Mais voltada para o pessoal
+CentOS
+*Mais voltada para o servidores, empresas
+*Versão gratuita do Rel
+
+*sestatus
+*systema macs
+*systema de monitoramento de acesso: APPARMOR, SELinux
+
+*SELinux é utilizada para empresas de grandes portes, trava tudo, caso quisermos algo funcionando temos que pedir. Trabalha com sistema de flags. Trabalha com o firewall
+*APPARMOR por default funciona para oque configuramos para funcionar.
+
+*uncomplicated firewall	
+*/etc/login.defs
+*chage -l user
+*pwquality - /etc/security/pwquality.conf
+*hostnamectl status
+*/etc/passwd
+*/var/log/sudo/sudo_log
+*/etc/sudoers.d/sudoers-rules
+*cron éum serviço para realizar operações que setamos
+*crontab -uroot -l
+*

@@ -1,0 +1,5 @@
+thisismypasswordwith20characters
+
+10.0.2.15
+10.0.2.255
+/etc/resolv.conf
